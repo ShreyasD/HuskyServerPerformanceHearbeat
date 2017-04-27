@@ -1,0 +1,33 @@
+<xsd:complexType name="AvailabilityRecord">
+            <xsd:sequence>
+               <xsd:element name="User" type="xsd:string" />
+               <xsd:element name="Access" type="xsd:string" />
+               <xsd:element name="Name" type="xsd:string" />
+               <xsd:element name="Asset" type="xsd:string" />
+               <xsd:element name="Application" type="xsd:string" />
+               <xsd:element name="PollingInterval" type="xsd:string" />
+               <xsd:element name="status" type="xsd:string" />
+               <xsd:element name="PlannedFlag" type="xsd:string" />
+               <xsd:element name="CRNumber" type="xsd:string" />
+               <xsd:element name="AppFlag" type="xsd:string" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="PerformanceRecord">
+            <xsd:sequence>
+               <xsd:element name="User" type="xsd:string" />
+               <xsd:element name="Access" type="xsd:string" />
+               <xsd:element name="Name" type="xsd:string" />
+<xsd:element name="Asset" type="xsd:string" />
+               <xsd:element name="Application" type="xsd:string" />
+               <xsd:element name="MetricName" type="xsd:string" />
+               <xsd:element name="MonitoringInstance" type="xsd:string" />
+               <xsd:element name="KeyTime " type="xsd:string" />
+               <xsd:element name="AverageValue" type="xsd:string" />
+               <xsd:element name="MinimumValue" type="xsd:string" />
+               <xsd:element name="MaxValue" type="xsd:string" />
+               <xsd:element name="CurrentValue" type="xsd:string" />
+               <xsd:element name="unit" type="xsd:string" />
+               <xsd:element name="type" type="xsd:string" />
+               <xsd:element name="app_flag" type="xsd:string" />
+            </xsd:sequence>
+         </xsd:complexType>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:p1="http://cisco.com/DV/DSP" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SI_DV_SNOW_OB" targetNamespace="http://cisco.com/DV/DSP">
+<wsdl:documentation/>
+<wsp:UsingPolicy wsdl:required="true"/>
+<wsp:Policy wsu:Id="OP_SI_DV_SNOW_OB"/>
+<wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.service-now.com/incident" targetNamespace="http://www.service-now.com/incident">
+    <xsd:element name="getRecords">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="active" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="activity_due" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="approval" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="approval_history" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="approval_set" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="assigned_to" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="assignment_group" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="business_duration" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="business_stc" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="calendar_duration" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="calendar_stc" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="caller_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="category" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="caused_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="close_code" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="close_notes" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="closed_at" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="closed_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="cmdb_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="comments" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="company" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="contact_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="correlation_display" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="correlation_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="delivery_plan" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="delivery_task" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="description" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="due_date" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="escalation" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="expected_start" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="follow_up" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="group_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="impact" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="knowledge" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="location" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="made_sla" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="notify" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="number" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="opened_at" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="opened_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="order" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="parent" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="priority" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="problem_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="reassignment_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="rfc" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="service_offering" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="severity" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="short_description" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="skills" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sla_due" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="state" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="subcategory" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_class_name" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_created_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_created_on" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_domain" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_mod_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_tags" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_updated_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="sys_updated_on" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="time_worked" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_active_children" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_business_service" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_category_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_close_category_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_closure_category" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_closure_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_closure_subcategory" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_cmdb_val_upd" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_comments_and_work_notes" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_copied_from" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_escalation_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_exception_details" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_expedite" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_fcr" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_fix_applied" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_identified_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_incident_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_itil_watch_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_mio_severity" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_no_ci_exists" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_notified_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_parent_incident" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_reason_no_ci_update" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_related_incidents" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_reopen_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_reported_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_reporting_exception" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_request_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_request_type_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_requested_for" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_responded" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_scm" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_start_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_suggested_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_template" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_transferred_from" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_transferred_to" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="u_wf_timer" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="upon_approval" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="upon_reject" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="urgency" type="xsd:integer" minOccurs="0" form="qualified"/>
+                <xsd:element name="user_input" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="watch_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="wf_activity" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="work_end" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="work_notes" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="work_start" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__use_view" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__encoded_query" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__limit" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__first_row" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__last_row" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__order_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__order_by_desc" type="xsd:string" minOccurs="0" form="qualified"/>
+                <xsd:element name="__exclude_columns" type="xsd:string" minOccurs="0" form="qualified"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="getRecordsResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="getRecordsResult" minOccurs="0" maxOccurs="unbounded" form="qualified">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="active" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="activity_due" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="approval" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="approval_set" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="assigned_to" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="assignment_group" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="business_duration" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="business_stc" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="calendar_duration" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="calendar_stc" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="caller_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="category" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="caused_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="close_code" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="close_notes" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="closed_at" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="closed_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="cmdb_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="company" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="contact_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="correlation_display" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="correlation_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="delivery_plan" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="delivery_task" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="description" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="due_date" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="escalation" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="expected_start" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="follow_up" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="group_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="impact" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="knowledge" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="location" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="made_sla" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="notify" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="number" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="opened_at" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="opened_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="order" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="parent" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="priority" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="problem_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="reassignment_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="rfc" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="service_offering" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="severity" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="short_description" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="skills" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sla_due" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="state" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="subcategory" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_class_name" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_created_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_created_on" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_domain" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_id" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_mod_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_tags" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_updated_by" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="sys_updated_on" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="time_worked" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_active_children" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_business_service" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_category_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_close_category_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_closure_category" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_closure_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_closure_subcategory" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_cmdb_val_upd" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_comments_and_work_notes" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_copied_from" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_escalation_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_exception_details" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_expedite" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_fcr" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_fix_applied" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_identified_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_incident_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_itil_watch_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_mio_severity" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_no_ci_exists" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_notified_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_parent_incident" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_reason_no_ci_update" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_related_incidents" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_reopen_count" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_reported_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_reporting_exception" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_request_type" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_request_type_other" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_requested_for" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_responded" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_scm" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_start_time" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_suggested_ci" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_template" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_transferred_from" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_transferred_to" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="u_wf_timer" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="upon_approval" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="upon_reject" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="urgency" type="xsd:integer" minOccurs="0" form="qualified"/>
+                            <xsd:element name="user_input" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="watch_list" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="wf_activity" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="work_end" type="xsd:string" minOccurs="0" form="qualified"/>
+                            <xsd:element name="work_start" type="xsd:string" minOccurs="0" form="qualified"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="p1.p2.getRecordsSoapIn">
+    <wsdl:documentation/>
+    <wsdl:part xmlns:p26="http://www.service-now.com/incident" name="incident" element="p26:getRecords"/>
+</wsdl:message>
+<wsdl:message name="p1.p2.getRecordsSoapOut">
+    <wsdl:documentation/>
+    <wsdl:part xmlns:p26="http://www.service-now.com/incident" name="incident" element="p26:getRecordsResponse"/>
+</wsdl:message>
+<wsdl:portType name="SI_DV_SNOW_OB">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_DV_SNOW_OB">
+        <wsdl:documentation/>
+        <wsp:Policy>
+            <wsp:PolicyReference URI="#OP_SI_DV_SNOW_OB"/>
+        </wsp:Policy>
+        <wsdl:input message="p1:p1.p2.getRecordsSoapIn"/>
+        <wsdl:output message="p1:p1.p2.getRecordsSoapOut"/>
+    </wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="SI_DV_SNOW_OBBinding" type="p1:SI_DV_SNOW_OB">
+    <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SI_DV_SNOW_OB">
+        <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1"/>
+        <wsdl:input>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+        </wsdl:input>
+        <wsdl:output>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+        </wsdl:output>
+    </wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="SI_DV_SNOW_OBService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DV_SNOW_OBBinding">
+        <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://vsid1ci1.huskyenergy.ca:51000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=ID1_DV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DV_SNOW_OB&amp;interfaceNamespace=http%3A%2F%2Fcisco.com%2FDV%2FDSP"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DV_SNOW_OBBinding">
+        <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="https://vsid1ci1.huskyenergy.ca:51001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=ID1_DV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DV_SNOW_OB&amp;interfaceNamespace=http%3A%2F%2Fcisco.com%2FDV%2FDSP"/>
+    </wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
