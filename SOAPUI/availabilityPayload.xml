@@ -1,0 +1,5 @@
+<hus:records>
+	<hus:Asset>ARDRDC01.hq.huskyenergy.com</hus:Asset>
+	<hus:PollingInterval>120</hus:PollingInterval>
+	<hus:Status>UP</hus:Status>
+</hus:records>

@@ -1,0 +1,93 @@
+<apex:page showHeader="true" standardStylesheets="false" sidebar="true" applyHtmlTag="true" 
+  applyBodyTag="false" docType="html-5.0" controller="Husky_SCOMChangeRequestByServerCtrl">
+
+<head>
+  <title>Change Requests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+  <apex:includeScript value="https://code.jquery.com/jquery-3.1.1.min.js"/>
+</head>    
+
+<body> 
+
+  <apex:form >
+    <!-- REQUIRED SLDS WRAPPER -->
+    <div class="huskyenergy" role="banner">    
+      <apex:outputPanel id="invalidServerId" rendered="{!changeRequestList == null || changeRequestList.size == 0}">
+        <h1 class="slds-text-heading--label slds-m-bottom--large">
+          No change requests to show!
+          <!-- <button class="slds-button slds-button--neutral" onclick="window.location.href='/apex/Husky_SCOMDashboard';">
+            Back
+          </button> -->
+        </h1>
+      </apex:outputPanel>
+      <apex:outputPanel id="changeRequestPanel" 
+        rendered="{!changeRequestList <> null && changeRequestList.size > 0}">
+        <!-- MASTHEAD -->
+        <h1 class="slds-text-heading--large slds-m-bottom--large">
+          Change Requests for {!server.Name}
+          <!-- <apex:outputLink value="/apex/Husky_SCOMDashboard">
+            <button class="slds-button slds-button--neutral">
+              Back
+            </button>
+          </apex:outputLink> -->
+        </h1>
+        <br/>
+        <h3 class="slds-text-heading--large slds-m-bottom--small">
+          ({!server.Applications__c})
+        </h3>
+        <!-- / MASTHEAD -->    
+
+        <apex:repeat value="{!changeRequestList}" var="changeRequest">
+          <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/standard-sprite/svg/symbols.svg#custom')}"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="slds-media__body">
+                  <h2>
+                    <apex:outputLink value="{!changeRequest.Hyperlink__c}">{!changeRequest.Name}</apex:outputLink>
+                  </h2>
+                </div>
+              </header>
+              <!-- <div class="slds-no-flex">
+                <button class="slds-button slds-button_neutral">New</button>
+              </div> -->
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+              <div class="slds-grid slds-p-horizontal--medium">
+                <div class="slds-col slds-size--1-of-1">
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Application__c.label}</div>
+                  <div class="slds-text-heading--small"><apex:outputLink value="/{!changeRequest.Id}">{!changeRequest.Application__c}</apex:outputLink></div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Opened_By__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.Opened_By__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.State__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.State__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Urgency__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.Urgency__c}</div>
+                </div>
+                <div class="slds-col slds-size--1-of-1">
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Priority__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.Priority__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Opened_At__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.Opened_At__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Short_Description__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.Short_Description__c}</div>
+                </div>
+              </div>
+            </div>
+            <!-- <footer class="slds-card__footer">Card Footer</footer> -->
+          </article>
+        </apex:repeat>   
+      </apex:outputPanel>
+    </div>
+    <!-- / REQUIRED SLDS WRAPPER -->    
+  </apex:form>
+</body>
+</apex:page>

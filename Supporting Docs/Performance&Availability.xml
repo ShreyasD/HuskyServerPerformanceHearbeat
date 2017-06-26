@@ -17,7 +17,7 @@
                <xsd:element name="User" type="xsd:string" />
                <xsd:element name="Access" type="xsd:string" />
                <xsd:element name="Name" type="xsd:string" />
-<xsd:element name="Asset" type="xsd:string" />
+               <xsd:element name="Asset" type="xsd:string" />
                <xsd:element name="Application" type="xsd:string" />
                <xsd:element name="MetricName" type="xsd:string" />
                <xsd:element name="MonitoringInstance" type="xsd:string" />

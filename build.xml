@@ -1,0 +1,19 @@
+<project name="HOG - Release 4" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+	<property file="build.properties"/>
+	<property environment="env"/>
+
+	<!-- Include antcontrib -->
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+	  <classpath>
+	    <pathelement location="./ant-contrib.jar"/>
+	  </classpath>
+	</taskdef>
+
+	
+
+	<target name="deploy">
+		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true"/>
+	</target>
+	
+</project>

@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>AccountController</members>
-		<members>Husky_ServiceNowPerformanceService</members>
-		<members>Husky_ServiceNowAvailabilityService</members>
-		<name>ApexClass</name>
-	</types>
-	<version>37.0</version>
+    <types>
+        <members>Husky_SCOMChangeRequestByServerCtrl</members>
+        <members>Husky_SCOMDashboardController</members>
+        <members>Husky_SCOMUtilities</members>
+        <members>Husky_ServiceNowApiUtils</members>
+        <members>Husky_ServiceNowAvailabilityService</members>
+        <members>Husky_ServiceNowPerformanceService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Husky_SCOMChangeRequestByServer</members>
+        <members>Husky_SCOMDashboard</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Husky_SCOMAvailabilityTrigger</members>
+        <members>Husky_SCOMChangeRequestTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>SCOM_Availability__c</members>
+        <members>SCOM_Change_Request__c</members>
+        <members>SCOM_Performance__c</members>
+        <members>SCOM_Server__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>37.0</version>
 </Package>
