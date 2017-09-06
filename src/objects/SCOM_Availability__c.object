@@ -84,7 +84,6 @@
         <externalId>false</externalId>
         <label>Server</label>
         <referenceTo>SCOM_Server__c</referenceTo>
-        <relationshipLabel>SCOM Availability</relationshipLabel>
         <relationshipName>SCOM_Availability</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -113,7 +112,7 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <label>SCOM Availability</label>
+    <label>Availability</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
@@ -125,7 +124,7 @@
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>SCOM Availability</pluralLabel>
+    <pluralLabel>Availability</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

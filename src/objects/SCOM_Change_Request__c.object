@@ -376,7 +376,7 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <label>SCOM Change Request</label>
+    <label>Change Request</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
@@ -389,7 +389,7 @@
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>SCOM Change Requests</pluralLabel>
+    <pluralLabel>Change Requests</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

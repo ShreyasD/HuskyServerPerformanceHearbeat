@@ -38,7 +38,7 @@ public with sharing class Husky_SCOMDashboardController {
 	private void queryAndGroupAvailabilityRecords() {
 		List<SCOM_Availability__c> availabilityList = [Select Id, Name, Polling_Interval__c, Server__c, 
 														      Server__r.Name, Server__r.Applications__c, Status__c,
-														      Server__r.Criticality__c
+														      Server__r.Criticality__c, Server__r.Data_Center__c
 													   From SCOM_Availability__c
 													   Order By Status__c Desc];
 		for(SCOM_Availability__c availability : availabilityList) {

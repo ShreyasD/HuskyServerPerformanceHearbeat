@@ -102,6 +102,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Data_Center__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Center</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Environment__c</fullName>
         <description>&quot;Used_for&quot; from the csv. The environment the server is used for. Ex. Production, Development etc</description>
         <externalId>false</externalId>
@@ -238,7 +249,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>SCOM Server</label>
+    <label>Server</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
@@ -246,12 +257,155 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+    <listViews>
+        <fullName>Allandale_DR_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Allandale DR Data Center</value>
+        </filters>
+        <label>Allandale DR Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>Lloydminster_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Lloydminster Data Center,Lloydminster-SK</value>
+        </filters>
+        <label>Lloydminster Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>Minnedosa_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Minnedosa Data Center,Minnedosa</value>
+        </filters>
+        <label>Minnedosa Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>Prince_George</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Prince George</value>
+        </filters>
+        <label>Prince George</label>
+    </listViews>
+    <listViews>
+        <fullName>Rogers_Airdrie_New_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Rogers Airdrie - New Data Center,AirDrie data centre,Airdrie datacentre</value>
+        </filters>
+        <label>Rogers Airdrie - New Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>Rogers_CoLo_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Rogers CoLo Data Center,COLo datacentre</value>
+        </filters>
+        <label>Rogers CoLo Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>Searose_Data_Center_EER3</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>Searose Data Center – EER3</value>
+        </filters>
+        <label>Searose Data Center – EER3</label>
+    </listViews>
+    <listViews>
+        <fullName>St_John_s_351_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>St. John&apos;s 351 - Data Center</value>
+        </filters>
+        <label>St. John&apos;s 351 - Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>WCP_Data_Center</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>WCP Data Center,WCP data centre</value>
+        </filters>
+        <label>WCP Data Center</label>
+    </listViews>
     <nameField>
         <label>Server Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>SCOM Servers</pluralLabel>
-    <searchLayouts/>
+    <pluralLabel>Server</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Applications__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Criticality__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Data_Center__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Host_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Applications__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Criticality__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Data_Center__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Host_Name__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Applications__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Criticality__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Data_Center__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Host_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Applications__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Data_Center__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Criticality__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Host_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

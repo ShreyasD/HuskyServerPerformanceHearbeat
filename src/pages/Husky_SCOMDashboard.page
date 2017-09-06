@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8" />
       <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <title>SCOM Dashboard</title>
+      <title>Husky System Heartbeat Report</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta http-equiv="x-ua-compatible" content="ie=edge"/>
       <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
@@ -129,7 +129,7 @@
 
       <!-- MASTHEAD -->
       <h1 class="slds-text-heading--large slds-m-bottom--large">
-        SCOM Availability Dashboard
+        Husky System Heartbeat Report
       </h1>
       <!-- / MASTHEAD -->    
 
@@ -166,6 +166,9 @@
                   <th scope="col" class="slds-cell-wrap slds-cell-shrink">
                     {!$ObjectType.SCOM_Availability__c.fields.Status__c.label}
                   </th>
+                  <!-- <th scope="col" class="slds-cell-wrap slds-cell-shrink">
+                    {!$ObjectType.SCOM_Server__c.fields.Data_Center__c.label}
+                  </th> -->
                 </tr>
               </thead>
               <tbody>
@@ -185,6 +188,9 @@
                         </div>
                       </apex:outputLink>
                     </th>
+                    <!-- <th scope="row" data-label="{!$ObjectType.SCOM_Server__c.fields.Name.label}">
+                      <apex:outputText>{!availability.Server__r.Data_Center__c}</apex:outputText>
+                    </th> -->
                   </tr>
                 </apex:repeat>
               </tbody>

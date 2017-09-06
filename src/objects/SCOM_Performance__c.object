@@ -144,7 +144,6 @@
         <externalId>false</externalId>
         <label>Server</label>
         <referenceTo>SCOM_Server__c</referenceTo>
-        <relationshipLabel>SCOM Performance</relationshipLabel>
         <relationshipName>Performance</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>true</reparentableMasterDetail>
@@ -193,7 +192,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>SCOM Performance</label>
+    <label>Performance</label>
     <listViews>
         <fullName>All</fullName>
         <columns>Monitor_Instance__c</columns>
@@ -210,7 +209,7 @@
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>SCOM Performance</pluralLabel>
+    <pluralLabel>Performance</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
