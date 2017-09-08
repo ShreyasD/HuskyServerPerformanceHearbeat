@@ -1,0 +1,67 @@
+#########################
+#CLEAR DUPLICATE SERVERS#
+#########################
+
+List<SCOM_Server__c> servers = [SELECT Id, Criticality__c, External_Id__c FROM SCOM_Server__c];
+Map<String, SCOM_Server__c> srvrMap = new Map<String, SCOM_Server__c>();
+List<SCOM_Server__c> toDelete = new List<SCOM_Server__c>();
+for (SCOM_Server__c server : servers) {
+	String key = String.valueOf(server.External_Id__c).toUpperCase();
+	if (srvrMap.containsKey(key)) {
+		if (srvrMap.get(key).Criticality__c == null) {
+			if (server.Criticality__c == null) {
+				if (key == 'CGWSCOM345PD'
+					|| key == 'CGWSCOM353PD'
+					|| key == 'CGWSCOM346PD'
+					|| key == 'arsjscom01'.toUpperCase()
+					|| key == 'CGWSCOM347PD'){
+					toDelete.add(server);
+				} else 
+					System.debug('Not decidable 1. : ' + server.External_Id__c);
+			} else {
+				toDelete.add(srvrMap.get(key));
+				srvrMap.put(key, server);
+			}	
+		} else if(server.Criticality__c == null) {
+			toDelete.add(server);
+		} else {
+			System.debug('Not decidable 2!');
+		}
+	} else 
+		srvrMap.put(key, server);
+}
+System.debug(servers.size());
+System.debug(srvrMap.size());
+System.debug(toDelete.size());
+delete toDelete;
+
+
+
+##################################
+#DELETE LOADED DATA FROM Baseline#
+##################################
+
+delete [SELECT Id FROM SCOM_Performance__c WHERE Type__c = 'Baseline'];
+
+
+##############################
+#SET REALTIME FROM NULL TYPES#
+##############################
+
+List<SCOM_Performance__c> perfs = [SELECT Id, Type__c FROM SCOM_Performance__c WHERE Type__c = null];
+for (SCOM_Performance__c perf : perfs) {
+	perf.Type__c = 'Realtime';
+}
+update perfs;
+
+
+#########################################
+#ADD TYPE TO EXTERNAL ID FOR PERFORMANCE#
+#########################################
+# NOTE # : If rerun for let's say reloaded baseline records - add WHERE clause in SELECT!!!
+
+List<SCOM_Performance__c> perfs = [SELECT Id, Type__c, External_Key__c FROM SCOM_Performance__c];
+for (SCOM_Performance__c perf : perfs) {
+	perf.External_Key__c = perf.External_Key__c + '-' + perf.Type__c;
+}
+update perfs;
