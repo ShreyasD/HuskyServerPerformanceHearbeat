@@ -12,6 +12,7 @@
     <types>
         <members>Husky_SCOMAvailabilityDashboard</members>
         <members>Husky_SCOMChangeRequestByServer</members>
+        <members>Husky_SCOMPerformanceDashboard</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -20,11 +21,20 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>SCOM_Status_Tracker</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>SCOM_Availability__c</members>
         <members>SCOM_Change_Request__c</members>
         <members>SCOM_Performance__c</members>
         <members>SCOM_Server__c</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>SCOM_Availability_Dashboard</members>
+        <members>SCOM_Performance_Dashboard</members>
+        <name>CustomTab</name>
     </types>
     <version>37.0</version>
 </Package>

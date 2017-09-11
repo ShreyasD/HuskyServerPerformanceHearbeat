@@ -1,0 +1,204 @@
+<apex:page showHeader="true" sidebar="true" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0" controller="Husky_SCOMDashboardController">   
+
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Husky System Heartbeat Report</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+      <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+      <apex:includeScript value="https://code.jquery.com/jquery-3.1.1.min.js"/>
+  </head>
+
+  <!-- Custom Page Style -->
+  <style type="text/css">
+  #availabilityStatusIndCriticality {
+      background-color: #000;
+      box-shadow: 0 0 5px rgba(0,0,0, .8);
+      overflow: hidden;
+      border-radius: 15px;
+      width: 46px;
+      height: 21px;
+      padding: 1px;
+      position: absolute;
+      right: 3px;
+    }
+
+    #availabilityStatusIndCriticality span {
+      border-radius: 15px;
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      margin: 2px;
+      opacity: .5;
+    }
+
+    /*! Status colours */
+    #down    { background-color: red; }
+    #up  { background-color: green; }
+
+    /*! Active states */
+    #availabilityStatusIndCriticality span.active    { opacity: 1; }
+    #availabilityStatusIndCriticality #down.active    { box-shadow: 0 0 10px red; }
+    #availabilityStatusIndCriticality #up.active  { box-shadow: 0 0 10px green; background-color: lime; }
+
+    #availabilityStatusIndServer {
+      background-color: #000;
+      box-shadow: 0 0 5px rgba(0,0,0, .8);
+      overflow: hidden;
+      border-radius:15px;
+      width: 45px;
+      height: 21px;
+    }
+
+    #availabilityStatusIndServer span {
+      border-radius: 15px;
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      margin:3px;
+      opacity: .5;
+      vertical-align: middle;
+    }
+
+    /*! Status colours */
+    #down    { background-color: red; }
+    #up  { background-color: green; }
+
+    /*! Active states */
+    #availabilityStatusIndServer span.active    { opacity: 1; }
+    #availabilityStatusIndServer #down.active    { box-shadow: 0 0 10px red; }
+    #availabilityStatusIndServer #up.active  { box-shadow: 0 0 10px green; background-color: lime; }
+  </style>
+
+  <script type="text/javascript">
+    var j$ = jQuery.noConflict();
+
+    j$(document).ready(function(){
+      var openSections = JSON.parse(sessionStorage.getItem("Husky_SCOMDashboard_openSections"));
+      j$(".categoryButton").each(function(){
+      //   if(!openSections.includes(this.id))
+          toggleServerList(this);
+      })
+    });
+
+    j$(window).on('beforeunload', function(){
+      storePageStatus();
+    });
+
+    function onCollapsibleClick(target) {
+      toggleServerList(target);
+    }
+
+    function toggleServerList(target) {
+      var serverList = j$(target).parent().parent().children(".serverList");
+      
+      //toggle
+      serverList.toggle();
+
+      //Change Icon
+      if(serverList.is(':visible')) {
+        j$(target).children("#chevronRight").hide();
+        j$(target).children("#chevronDown").show();
+      } else {
+        j$(target).children("#chevronDown").hide();
+        j$(target).children("#chevronRight").show();
+      }
+    }
+
+    function storePageStatus() {
+      var openSections = [];
+      j$(".categoryButton").each(function(){
+        var serverList = j$(this).parent().parent().children(".serverList");
+        if(serverList.is(':visible')) {
+          console.log(this.id + ' section is open!');
+          openSections.push(this.id);
+        }
+      })
+
+      //Add to sessionstorage
+      console.log(openSections);
+      sessionStorage.setItem("Husky_SCOMDashboard_openSections", JSON.stringify(openSections));
+    }
+  </script>  
+
+  <body>    
+
+    <!-- REQUIRED SLDS WRAPPER -->
+    <div class="huskyenergy" role="banner">    
+
+      <!-- MASTHEAD -->
+      <h1 class="slds-text-heading--large slds-m-bottom--large">
+        Husky System Performance Report
+      </h1>
+      <!-- / MASTHEAD -->    
+
+      <!-- PRIMARY CONTENT WRAPPER -->
+      <apex:repeat value="{!criticalityCategories}" var="criticality">
+        <div class="slds-section slds-is-open">
+          <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action categoryButton" onclick="onCollapsibleClick(this);" id="{!criticality}Section">
+              <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" id="chevronRight">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/utility-sprite/svg/symbols.svg#chevronright')}"></use>
+              </svg>
+              <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" id="chevronDown">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/utility-sprite/svg/symbols.svg#chevrondown')}"></use>
+              </svg>
+              <span class="slds-truncate">
+                {!criticality}
+              </span>
+              <div id="availabilityStatusIndCriticality">
+                <span class="{!IF(criticalityStatusMap[criticality] == 'Down', 'active','')}" id="down"></span>
+                <span class="{!IF(criticalityStatusMap[criticality] == 'Up', 'active','')}" id="up"></span>
+              </div>
+            </button>
+          </h3>
+          <div aria-hidden="false" class="slds-section__content serverList" id="expando-unique-id">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+              <thead>
+                <tr class="slds-text-title--caps">
+                  <td scope="col" class="slds-cell-wrap">
+                    <h5 class="font-size-heading-x-small">{!$ObjectType.SCOM_Server__c.fields.Applications__c.label}</h5>
+                  </td>
+                  <th scope="col" class="slds-cell-wrap">
+                    {!$ObjectType.SCOM_Server__c.fields.Name.label}
+                  </th>
+                  <th scope="col" class="slds-cell-wrap slds-cell-shrink">
+                    {!$ObjectType.SCOM_Availability__c.fields.Status__c.label}
+                  </th>
+                  <!-- <th scope="col" class="slds-cell-wrap slds-cell-shrink">
+                    {!$ObjectType.SCOM_Server__c.fields.Data_Center__c.label}
+                  </th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <apex:repeat value="{!availabilityRecordsByCriticalityMap[criticality]}" var="availability">
+                  <tr>
+                    <th scope="row" class="slds-cell-wrap" data-label="{!$ObjectType.SCOM_Server__c.fields.Applications__c.label}">
+                      <apex:outputLink value="/{!availability.Server__c}">{!availability.Server__r.Applications__c}</apex:outputLink>
+                    </th>
+                    <th scope="row" data-label="{!$ObjectType.SCOM_Server__c.fields.Name.label}">
+                      <apex:outputLink value="/{!availability.Server__c}">{!availability.Server__r.Name}</apex:outputLink>
+                    </th>
+                    <th scope="row" data-label="{!$ObjectType.SCOM_Availability__c.fields.Status__c.label}">
+                      <apex:outputLink value="/apex/Husky_SCOMChangeRequestByServer?serverId={!availability.Server__c}&retURL=/Husky_SCOMDashboard">
+                        <div id="availabilityStatusIndServer">
+                          <span class="{!IF(availability.Status__c == 'Down', 'active','')}" id="down"></span>
+                          <span class="{!IF(availability.Status__c == 'Up', 'active','')}" id="up"></span>
+                        </div>
+                      </apex:outputLink>
+                    </th>
+                  </tr>
+                </apex:repeat> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </apex:repeat>
+      <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    </div>
+    <!-- / REQUIRED SLDS WRAPPER -->    
+
+  </body>
+</apex:page>
