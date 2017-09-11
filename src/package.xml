@@ -10,8 +10,8 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Husky_SCOMAvailabilityDashboard</members>
         <members>Husky_SCOMChangeRequestByServer</members>
-        <members>Husky_SCOMDashboard</members>
         <name>ApexPage</name>
     </types>
     <types>

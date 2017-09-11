@@ -82,6 +82,7 @@
     </fields>
     <fields>
         <fullName>External_Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
         <externalId>true</externalId>
         <label>External Key</label>
         <length>255</length>
@@ -89,7 +90,7 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
-        <unique>false</unique>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Max_Metric_Value__c</fullName>
@@ -202,6 +203,23 @@
         <columns>Max_Metric_Value__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Baseline_Performance_Values</fullName>
+        <columns>NAME</columns>
+        <columns>Min_Metric_Value__c</columns>
+        <columns>Avg_Metric_Value__c</columns>
+        <columns>Current_Metric_Value__c</columns>
+        <columns>Max_Metric_Value__c</columns>
+        <columns>External_Key__c</columns>
+        <columns>Monitor_Instance__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </filters>
+        <label>Baseline Performance Values</label>
     </listViews>
     <nameField>
         <displayFormat>SPN-{000000000}</displayFormat>
