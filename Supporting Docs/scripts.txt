@@ -65,3 +65,30 @@ for (SCOM_Performance__c perf : perfs) {
 	perf.External_Key__c = perf.External_Key__c + '-' + perf.Type__c;
 }
 update perfs;
+
+
+############################
+#REMOVE DUPLICATE BASELINES#
+############################
+
+List<SCOM_Performance__c> perfs = [SELECT Id, External_Key__c, Type__c, CreatedDate FROM SCOM_Performance__c WHERE Type__c = 'Baseline'];
+Map<String, SCOM_Performance__c> perfsMap = new Map<String, SCOM_Performance__c>();
+List<SCOM_Performance__c> toDelete = new List<SCOM_Performance__c>();
+for (SCOM_Performance__c perf : perfs) {
+	if (perfsMap.containsKey(perf.External_Key__c.toUpperCase())) {
+		if (perfsMap.get(perf.External_Key__c.toUpperCase()).CreatedDate >= perf.CreatedDate) {
+			toDelete.add(perf);
+		} else {
+			toDelete.add(perfsMap.get(perf.External_Key__c.toUpperCase()));
+			perfsMap.put(perf.External_Key__c.toUpperCase(), perf);
+		}
+	} else {
+		perfsMap.put(perf.External_Key__c.toUpperCase(), perf);
+	}
+}
+
+System.debug(perfs.size());
+System.debug(perfsMap.size());
+System.debug(toDelete.size());
+
+delete toDelete;
