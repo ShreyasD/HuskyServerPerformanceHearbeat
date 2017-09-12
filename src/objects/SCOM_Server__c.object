@@ -126,6 +126,7 @@
     </fields>
     <fields>
         <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
         <description>External Id for upsert operations from dataloader.</description>
         <externalId>true</externalId>
         <label>External Id</label>
@@ -134,7 +135,7 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
-        <unique>false</unique>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Host_Name__c</fullName>
@@ -314,6 +315,20 @@
         <label>Prince George</label>
     </listViews>
     <listViews>
+        <fullName>Rogers_Airdrie_Critical</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Criticality__c</field>
+            <operation>equals</operation>
+            <value>(5) Mission Critical,(4) Business Critical,(3) Business Important</value>
+        </filters>
+        <label>Rogers Airdrie - Critical</label>
+    </listViews>
+    <listViews>
         <fullName>Rogers_Airdrie_New_Data_Center</fullName>
         <columns>NAME</columns>
         <columns>Applications__c</columns>
@@ -382,6 +397,25 @@
             <value>WCP Data Center,WCP data centre</value>
         </filters>
         <label>WCP Data Center</label>
+    </listViews>
+    <listViews>
+        <fullName>WCP_Data_Center_Critical</fullName>
+        <columns>NAME</columns>
+        <columns>Applications__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Host_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Criticality__c</field>
+            <operation>equals</operation>
+            <value>(5) Mission Critical,(4) Business Critical,(3) Business Important</value>
+        </filters>
+        <filters>
+            <field>Data_Center__c</field>
+            <operation>equals</operation>
+            <value>WCP Data Center,WCP data centre</value>
+        </filters>
+        <label>WCP Data Center - Critical</label>
     </listViews>
     <nameField>
         <label>Server Name</label>

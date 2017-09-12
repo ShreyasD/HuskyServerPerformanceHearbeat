@@ -1,15 +1,22 @@
 public with sharing class Husky_SCOMDashboardController {
 
+	//Both
 	public List<String> criticalityCategories {get; private set;}
+	public Map<String, List<SCOM_Change_Request__c>> serverToChangeRequestMap {get; private set;}
+
+	//Availability Dashboard
 	public Map<String, String> criticalityStatusMap {get; private set;}
 	public Map<String, List<SCOM_Availability__c>> availabilityRecordsByCriticalityMap {get; private set;}
-	public Map<String, List<SCOM_Change_Request__c>> serverToChangeRequestMap {get; private set;}
+
+	//Performance Dashboard
+	public Map<String, String> performanceToStatusMap {get; private set;}
+
 
 	private Set<String> serverNames;
 
 	public Husky_SCOMDashboardController() {
 		initialize();
-		process();
+		processCriticality();
 	}
 
 	public void initialize() {
@@ -19,7 +26,7 @@ public with sharing class Husky_SCOMDashboardController {
 		serverNames = new Set<String>();
 	}
 
-	public void process() {
+	public void processCriticality() {
 		populateCriticalityStatusMap();
 		queryAndGroupAvailabilityRecords();
 	}

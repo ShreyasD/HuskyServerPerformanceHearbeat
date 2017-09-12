@@ -1,6 +1,6 @@
 global class Husky_ServiceNowPerformanceService {
 
-	private static List<SCOM_Server__c> serverRecords; 
+	private static List<SCOM_Server__c> serverRecords;
 	private static List<SCOM_Performance__c> performanceRecords;
 
 	global class APIServerPerformance {
@@ -47,21 +47,22 @@ global class Husky_ServiceNowPerformanceService {
 			serverMap.put(performanceRecord.Asset.subStringBefore('.'), performanceRecord.Assettype);
 
 			//Get Performance Info
-			String monitoringInstance = (!String.isBlank(performanceRecord.MonitoringInstance)) ? 
+			String monitoringInstance = (!String.isBlank(performanceRecord.MonitoringInstance)) ?
 				performanceRecord.MonitoringInstance : '_self';
 			SCOM_Performance__c record = new SCOM_Performance__c();
+			record.Type__c = 'Realtime';
 			record.External_Key__c = performanceRecord.Asset + '-' + performanceRecord.MetricName + '-' +
-				monitoringInstance;
+				monitoringInstance + '-' + record.Type__c;
 			record.Metric__c = performanceRecord.MetricName;
 			record.Monitor_Instance__c = monitoringInstance;
 			record.Time__c = DateTime.newInstance(Long.valueOf(performanceRecord.KeyTime + '000'));
-			record.Avg_Metric_Value__c = (!String.isBlank(performanceRecord.AverageValue)) ? 
+			record.Avg_Metric_Value__c = (!String.isBlank(performanceRecord.AverageValue)) ?
 				Decimal.valueOf(performanceRecord.AverageValue) : 0.00;
 			record.Min_Metric_Value__c = (!String.isBlank(performanceRecord.MinimumValue)) ?
 				Decimal.valueOf(performanceRecord.MinimumValue) : 0.00;
-			record.Max_Metric_Value__c = (!String.isBlank(performanceRecord.MaxValue)) ? 
+			record.Max_Metric_Value__c = (!String.isBlank(performanceRecord.MaxValue)) ?
 				Decimal.valueOf(performanceRecord.MaxValue) : 0.00;
-			record.Current_Metric_Value__c = (!String.isBlank(performanceRecord.CurrentValue)) ? 
+			record.Current_Metric_Value__c = (!String.isBlank(performanceRecord.CurrentValue)) ?
 				Decimal.valueOf(performanceRecord.CurrentValue) : 0.00;
 			record.Unit__c = performanceRecord.Unit;
 			record.Server__r = new SCOM_Server__c(
@@ -95,11 +96,11 @@ global class Husky_ServiceNowPerformanceService {
 
 		for(Integer i=0; i < upsertResults.size(); i++) {
 			Database.UpsertResult upsertResult = upsertResults[i];
-			String statusCode = upsertResult.isSuccess() ? Husky_ServiceNowApiUtils.STATUS_SUCCESS_UPSERT : 
+			String statusCode = upsertResult.isSuccess() ? Husky_ServiceNowApiUtils.STATUS_SUCCESS_UPSERT :
 				Husky_ServiceNowApiUtils.STATUS_ERROR_UPSERT;
 			String idString = (String) ((dmlRecords[i] instanceof SCOM_Server__c) ? dmlRecords[i].get('Name') :
 				dmlRecords[i].get('External_Key__c'));
-			Husky_ServiceNowApiUtils.Result result = new Husky_ServiceNowApiUtils.Result(upsertResult.isCreated(), idString, 
+			Husky_ServiceNowApiUtils.Result result = new Husky_ServiceNowApiUtils.Result(upsertResult.isCreated(), idString,
 				upsertResult.isSuccess(), statusCode);
 			for(Database.Error err : upsertResult.getErrors()) {
 				result.addError(new Husky_ServiceNowApiUtils.Error(err.getFields(), err.getMessage(), err.getStatusCode()));
