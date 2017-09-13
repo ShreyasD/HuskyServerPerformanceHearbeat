@@ -68,6 +68,53 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>Avg_Baseline_CPU_Utilization__c</fullName>
+        <externalId>false</externalId>
+        <label>Avg Baseline CPU Utilization</label>
+        <summarizedField>SCOM_Performance__c.Avg_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>CPU Utilization</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Monitor_Instance__c</field>
+            <operation>equals</operation>
+            <value>_Total</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Avg_Baseline_Memory_Utilization__c</fullName>
+        <externalId>false</externalId>
+        <label>Avg Baseline Memory Utilization</label>
+        <summarizedField>SCOM_Performance__c.Avg_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>Memory Utilization</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>Criticality__c</fullName>
         <description>Column &quot;u_cmdb_criticality&quot; from csv.</description>
         <externalId>false</externalId>
@@ -160,6 +207,106 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Baseline_CPU_Utilization__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Baseline CPU Utilization</label>
+        <summarizedField>SCOM_Performance__c.Max_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>CPU Utilization</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Monitor_Instance__c</field>
+            <operation>equals</operation>
+            <value>_Total</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Max_Baseline_Memory_Utilization__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Baseline Memory Utilization</label>
+        <summarizedField>SCOM_Performance__c.Max_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>Memory Utilization</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Monitor_Instance__c</field>
+            <operation>equals</operation>
+            <value>_self</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Min_Baseline_CPU_Utilization__c</fullName>
+        <description>This field will be use to compare realtime values for server for CPU Utilization.</description>
+        <externalId>false</externalId>
+        <label>Min Baseline CPU Utilization</label>
+        <summarizedField>SCOM_Performance__c.Min_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Monitor_Instance__c</field>
+            <operation>equals</operation>
+            <value>_Total</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>CPU Utilization</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Min_Baseline_Memory_Utilization__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Baseline Memory Utilization</label>
+        <summarizedField>SCOM_Performance__c.Min_Metric_Value__c</summarizedField>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Baseline</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SCOM_Performance__c.Metric__c</field>
+            <operation>equals</operation>
+            <value>Memory Utilization</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SCOM_Performance__c.Server__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>Model_Id__c</fullName>
