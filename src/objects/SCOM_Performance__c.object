@@ -52,7 +52,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>false</enableSharing>
     <enableStreamingApi>false</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
@@ -213,6 +212,7 @@
         <columns>Max_Metric_Value__c</columns>
         <columns>External_Key__c</columns>
         <columns>Monitor_Instance__c</columns>
+        <columns>Metric__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Type__c</field>
@@ -228,6 +228,44 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Performance</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Avg_Metric_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Current_Metric_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Max_Metric_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Metric__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Min_Metric_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monitor_Instance__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Server__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Avg_Metric_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Current_Metric_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Max_Metric_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Metric__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Min_Metric_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Monitor_Instance__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Unit__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Avg_Metric_Value__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Current_Metric_Value__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Max_Metric_Value__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Metric__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Min_Metric_Value__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Monitor_Instance__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Server__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Unit__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Server__c</searchFilterFields>
+        <searchFilterFields>Metric__c</searchFilterFields>
+        <searchResultsAdditionalFields>Avg_Metric_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Current_Metric_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Min_Metric_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Max_Metric_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Monitor_Instance__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Metric__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

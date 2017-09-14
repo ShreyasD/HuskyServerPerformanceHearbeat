@@ -1,4 +1,4 @@
-<apex:page showHeader="true" sidebar="true" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0" controller="Husky_SCOMDashboardController">   
+<apex:page showHeader="true" sidebar="true" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0" controller="Husky_SCOMDashboardController">
 
   <head>
       <meta charset="utf-8" />
@@ -12,63 +12,77 @@
 
   <!-- Custom Page Style -->
   <style type="text/css">
-  #availabilityStatusIndCriticality {
+
+  #performanceStatusIndCriticalityWrapper {
+      position: absolute;
+      display: inline-block;
+      right: 3px;
+  }
+
+  #performanceStatusIndCriticality {
       background-color: #000;
       box-shadow: 0 0 5px rgba(0,0,0, .8);
       overflow: hidden;
       border-radius: 15px;
-      width: 46px;
+      width: 64px;
       height: 21px;
-      padding: 1px;
-      position: absolute;
-      right: 3px;
+      display: inline-flex;
+      right: 5px;
     }
 
-    #availabilityStatusIndCriticality span {
+    #performanceStatusIndCriticality span {
       border-radius: 15px;
       display: inline-block;
       height: 15px;
       width: 15px;
-      margin: 2px;
-      opacity: .5;
+      margin: 3px;
+      opacity: .3;
+      vertical-align: middle;
     }
 
     /*! Status colours */
-    #down    { background-color: red; }
-    #up  { background-color: green; }
+    #green    { background-color: lime; }
+    #orange  { background-color: orange; }
+    #red  { background-color: red; }
 
     /*! Active states */
-    #availabilityStatusIndCriticality span.active    { opacity: 1; }
-    #availabilityStatusIndCriticality #down.active    { box-shadow: 0 0 10px red; }
-    #availabilityStatusIndCriticality #up.active  { box-shadow: 0 0 10px green; background-color: lime; }
+    #performanceStatusIndCriticality span.active    { opacity: 1; }
+    #performanceStatusIndCriticality #red.active    { box-shadow: 0 0 10px red; }
+    #performanceStatusIndCriticality #orange.active    { box-shadow: 0 0 10px orange; }
+    #performanceStatusIndCriticality #green.active  { box-shadow: 0 0 10px green; background-color: lime; }
 
-    #availabilityStatusIndServer {
+    #performanceStatusIndServer span.active    { opacity: 1; }
+    #performanceStatusIndServer #red.active    { box-shadow: 0 0 10px red; }
+    #performanceStatusIndServer #orange.active  { box-shadow: 0 0 10px orange; }
+    #performanceStatusIndServer #green.active  { box-shadow: 0 0 10px green; background-color: lime; }
+
+    #performanceStatusIndServer {
       background-color: #000;
       box-shadow: 0 0 5px rgba(0,0,0, .8);
       overflow: hidden;
       border-radius:15px;
-      width: 45px;
+      width: 68px;
       height: 21px;
     }
 
-    #availabilityStatusIndServer span {
+    #performanceStatusIndServer span {
       border-radius: 15px;
       display: inline-block;
       height: 15px;
       width: 15px;
       margin:3px;
-      opacity: .5;
+      margin-right: 2px;
+      opacity: .3;
       vertical-align: middle;
     }
 
-    /*! Status colours */
-    #down    { background-color: red; }
-    #up  { background-color: green; }
+    .text-center {
+        text-align: center !important;
+    }
 
-    /*! Active states */
-    #availabilityStatusIndServer span.active    { opacity: 1; }
-    #availabilityStatusIndServer #down.active    { box-shadow: 0 0 10px red; }
-    #availabilityStatusIndServer #up.active  { box-shadow: 0 0 10px green; background-color: lime; }
+    /*! Status colours */
+    /*#down    { background-color: red; }
+    #up  { background-color: green; }*/
   </style>
 
   <script type="text/javascript">
@@ -92,7 +106,7 @@
 
     function toggleServerList(target) {
       var serverList = j$(target).parent().parent().children(".serverList");
-      
+
       //toggle
       serverList.toggle();
 
@@ -120,18 +134,18 @@
       console.log(openSections);
       sessionStorage.setItem("Husky_SCOMDashboard_openSections", JSON.stringify(openSections));
     }
-  </script>  
+  </script>
 
-  <body>    
+  <body>
 
     <!-- REQUIRED SLDS WRAPPER -->
-    <div class="huskyenergy" role="banner">    
+    <div class="huskyenergy" role="banner">
 
       <!-- MASTHEAD -->
       <h1 class="slds-text-heading--large slds-m-bottom--large">
         Husky System Performance Report
       </h1>
-      <!-- / MASTHEAD -->    
+      <!-- / MASTHEAD -->
 
       <!-- PRIMARY CONTENT WRAPPER -->
       <apex:repeat value="{!criticalityCategories}" var="criticality">
@@ -147,9 +161,17 @@
               <span class="slds-truncate">
                 {!criticality}
               </span>
-              <div id="availabilityStatusIndCriticality">
-                <span class="{!IF(criticalityStatusMap[criticality] == 'Down', 'active','')}" id="down"></span>
-                <span class="{!IF(criticalityStatusMap[criticality] == 'Up', 'active','')}" id="up"></span>
+              <div id="performanceStatusIndCriticalityWrapper">
+                  <div id="performanceStatusIndCriticality">
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricCPU] == green, 'active','')}" id="green"></span>
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricCPU] == orange, 'active','')}" id="orange"></span>
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricCPU] == red, 'active','')}" id="red"></span>
+                  </div>
+                  <div id="performanceStatusIndCriticality">
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricMEM] == green, 'active','')}" id="green"></span>
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricMEM] == orange, 'active','')}" id="orange"></span>
+                    <span class="{!IF(performanceToStatusMap[criticality + performanceMetricMEM] == red, 'active','')}" id="red"></span>
+                  </div>
               </div>
             </button>
           </h3>
@@ -163,42 +185,70 @@
                   <th scope="col" class="slds-cell-wrap">
                     {!$ObjectType.SCOM_Server__c.fields.Name.label}
                   </th>
-                  <th scope="col" class="slds-cell-wrap slds-cell-shrink">
-                    {!$ObjectType.SCOM_Availability__c.fields.Status__c.label}
+                  <th scope="col" class="slds-cell-wrap slds-cell-shrink text-center">
+                    CPU status
                   </th>
-                  <!-- <th scope="col" class="slds-cell-wrap slds-cell-shrink">
-                    {!$ObjectType.SCOM_Server__c.fields.Data_Center__c.label}
-                  </th> -->
+                  <th scope="col" class="slds-cell-wrap slds-cell-shrink text-center">
+                    Memory status
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                <!-- <apex:repeat value="{!availabilityRecordsByCriticalityMap[criticality]}" var="availability">
+                <apex:repeat value="{!performanceRecordsByCriticalityMap[criticality]}" var="performance">
                   <tr>
                     <th scope="row" class="slds-cell-wrap" data-label="{!$ObjectType.SCOM_Server__c.fields.Applications__c.label}">
-                      <apex:outputLink value="/{!availability.Server__c}">{!availability.Server__r.Applications__c}</apex:outputLink>
+                      <apex:outputLink value="/{!performance.server.Id}">{!performance.server.Applications__c}</apex:outputLink>
                     </th>
                     <th scope="row" data-label="{!$ObjectType.SCOM_Server__c.fields.Name.label}">
-                      <apex:outputLink value="/{!availability.Server__c}">{!availability.Server__r.Name}</apex:outputLink>
+                      <apex:outputLink value="/{!performance.server.id}">{!performance.server.Name}</apex:outputLink>
                     </th>
-                    <th scope="row" data-label="{!$ObjectType.SCOM_Availability__c.fields.Status__c.label}">
-                      <apex:outputLink value="/apex/Husky_SCOMChangeRequestByServer?serverId={!availability.Server__c}&retURL=/Husky_SCOMDashboard">
-                        <div id="availabilityStatusIndServer">
-                          <span class="{!IF(availability.Status__c == 'Down', 'active','')}" id="down"></span>
-                          <span class="{!IF(availability.Status__c == 'Up', 'active','')}" id="up"></span>
-                        </div>
+                    <th scope="row" data-label="CPU Status">
+                      <apex:outputLink value="/apex/Husky_SCOMChangeRequestByServer?serverId={!performance.server.id}&retURL=/Husky_SCOMDashboard">
+                        <apex:outputPanel rendered="{!performance.CPUPerformanceStatus != null}">
+                            <div id="performanceStatusIndServer">
+                              <span id="green" class="{!IF(performance.CPUPerformanceStatus == green , 'active', '')}"></span>
+                              <span id="orange" class="{!IF(performance.CPUPerformanceStatus == orange , 'active', '')}"></span>
+                              <span id="red" class="{!IF(performance.CPUPerformanceStatus == red , 'active', '')}"></span>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!performance.CPUPerformanceStatus == null}">
+                            <div id="performanceStatusIndServer">
+                                <span id="green" class="active"></span>
+                                <span id="orange"></span>
+                                <span id="red"></span>
+                              </div>
+                        </apex:outputPanel>
+                      </apex:outputLink>
+                    </th>
+                    <th scope="row" data-label="Memory Status">
+                        <apex:outputLink value="/apex/Husky_SCOMChangeRequestByServer?serverId={!performance.server.id}&retURL=/Husky_SCOMDashboard">
+                            <apex:outputPanel rendered="{!performance.MemPerformanceStatus != null}">
+                              <div id="performanceStatusIndServer">
+                                  <span id="green" class="{!IF(performance.MemPerformanceStatus == green , 'active', '')}"></span>
+                                  <span id="orange" class="{!IF(performance.MemPerformanceStatus == orange , 'active', '')}"></span>
+                                  <span id="red" class="{!IF(performance.MemPerformanceStatus == red , 'active', '')}"></span>
+                                </div>
+                            </apex:outputPanel>
+                        <apex:outputPanel rendered="{!performance.MemPerformanceStatus == null}">
+                            <div id="performanceStatusIndServer">
+                                <span id="green" class="active"></span>
+                                <span id="orange"></span>
+                                <span id="red"></span>
+                              </div>
+                        </apex:outputPanel>
                       </apex:outputLink>
                     </th>
                   </tr>
-                </apex:repeat> -->
+                </apex:repeat>
               </tbody>
             </table>
           </div>
         </div>
       </apex:repeat>
-      <!-- / PRIMARY CONTENT WRAPPER -->    
+      <!-- / PRIMARY CONTENT WRAPPER -->
 
     </div>
-    <!-- / REQUIRED SLDS WRAPPER -->    
+    <!-- / REQUIRED SLDS WRAPPER -->
 
   </body>
 </apex:page>

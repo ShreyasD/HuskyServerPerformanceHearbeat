@@ -1,5 +1,34 @@
 public class Husky_SCOMUtilities {
+
+	/******************************
+	Performance Dashboard constants
+	******************************/
+	public static String PERFORMANCE_LIST_QUERY_STRING = 'SELECT Avg_Metric_Value__c, Current_Metric_Value__c, Max_Metric_Value__c'
+														+ ', External_Key__c, Metric__c, Type__c, Unit__c, Server__c, Server__r.Id'
+														+ ', Server__r.Criticality__c, Server__r.Applications__c, Server__r.Name'
+														+ ' FROM SCOM_Performance__c ORDER BY Type__c ASC';
+
+	public static final String PERFORMANCE_UNIT_CPU 	= '%';
+	public static final String PERFORMANCE_UNIT_MEMORY 	= 'MB';
+
+	public static final String PERFORMANCE_METRIC_CPU 			= 'CPU Utilization';
+	public static final String PERFORMANCE_METRIC_MEMORY 		= 'Memory Utilization';
+	public static final String PERFORMANCE_METRIC_FREESPACE 	= 'Free Space';
+	public static final String PERFORMANCE_METRIC_TOTALSPACE 	= 'Total Space';
+	public static final String PERFORMANCE_METRIC_USEDSPACE 	= 'Used Space';
+
+	public static final String PERFORMANCE_TYPE_REALTIME = 'Realtime';
+	public static final String PERFORMANCE_TYPE_BASELINE = 'Baseline';
+
+	public static final String PERFORMANCE_GREEN 	= 'green';
+	public static final String PERFORMANCE_ORANGE	= 'orange';
+	public static final String PERFORMANCE_RED 		= 'red';
+
+	/****************
+	Trigger constants
+	****************/
 	public static Boolean executeTriggerCode = true;
+
 
 	public static void TriggerBeforeInsertSCOMChangeRequest(List<SCOM_Change_Request__c> changeRequestList) {
 		updateServerOnChangeRequest(changeRequestList);
@@ -10,7 +39,7 @@ public class Husky_SCOMUtilities {
 	}
 
 	public static void updateServerOnChangeRequest(List<SCOM_Change_Request__c> changeRequestList) {
-		
+
 	}
 
 	public static void TriggerAfterInsertSCOMAvailability(List<SCOM_Availability__c> availabilityList) {
