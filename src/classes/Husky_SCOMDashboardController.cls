@@ -68,14 +68,10 @@ public with sharing class Husky_SCOMDashboardController {
 		List<SCOM_Performance__c> performanceList = Database.query(Husky_SCOMUtilities.PERFORMANCE_LIST_QUERY_STRING);
 		Map<String, PerformanceWrapper> performanceMergeMap = new Map<String, PerformanceWrapper>();
 		for (SCOM_Performance__c performanceRecord : performanceList) {
-			if (performanceRecord.Metric__c != Husky_SCOMUtilities.PERFORMANCE_METRIC_FREESPACE
-				|| performanceRecord.Metric__c != Husky_SCOMUtilities.PERFORMANCE_METRIC_USEDSPACE
-				|| performanceRecord.Metric__c != Husky_SCOMUtilities.PERFORMANCE_METRIC_TOTALSPACE) { //NOTE we don't have Baseline free space records.
-				String key = performanceRecord.Server__r.Criticality__c + performanceRecord.Server__c;
-				if (performanceMergeMap.containsKey(key))
-					performanceMergeMap.get(key).addPerformanceValues(performanceRecord);
-				else performanceMergeMap.put(key, new PerformanceWrapper(performanceRecord));
-			}
+			String key = performanceRecord.Server__r.Criticality__c + performanceRecord.Server__c;
+			if (performanceMergeMap.containsKey(key))
+				performanceMergeMap.get(key).addPerformanceValues(performanceRecord);
+			else performanceMergeMap.put(key, new PerformanceWrapper(performanceRecord));
 		}
 		buildPerformanceRecordsByCriticalityMap(performanceMergeMap);
 	}
@@ -93,7 +89,6 @@ public with sharing class Husky_SCOMDashboardController {
 			}
 			setPerformanceCriticalityStatus(key, performanceWrapper);
 		}
-		System.debug('Size of Not Specified servers: ' + performanceRecordsByCriticalityMap.get('Not Specified').size());
 	}
 
 	private void setPerformanceCriticalityStatus(String key, PerformanceWrapper performanceWrapper) {
@@ -125,8 +120,7 @@ public with sharing class Husky_SCOMDashboardController {
 		for(SCOM_Change_Request__c cr : changeRequestList) {
 			if(changeRequestMapByApplication.containsKey(cr.Application__c))
 				changeRequestMapByApplication.get(cr.Application__c).add(cr);
-			else
-				changeRequestMapByApplication.put(cr.Application__c, new List<SCOM_Change_Request__c>{cr});
+			else changeRequestMapByApplication.put(cr.Application__c, new List<SCOM_Change_Request__c>{cr});
 		}
 
 		for(SCOM_Server__c server : serverList) {
@@ -135,8 +129,7 @@ public with sharing class Husky_SCOMDashboardController {
 					if(serverToChangeRequestMap.containsKey(server.Name))
 						serverToChangeRequestMap.get(server.Name).addAll(changeRequestMapByApplication.get(application));
 					else {
-						serverToChangeRequestMap.put(server.Name,
-							new List<SCOM_Change_Request__c>());
+						serverToChangeRequestMap.put(server.Name, new List<SCOM_Change_Request__c>());
 						serverToChangeRequestMap.get(server.Name).addAll(changeRequestMapByApplication.get(application));
 					}
 				}
@@ -187,13 +180,10 @@ public with sharing class Husky_SCOMDashboardController {
 		}
 
 		private void setPerformanceValuesForCPU(SCOM_Performance__c performance) {
-			// System.debug('Performance type: ' + performance.Type__c);
 			if (performance.Type__c == Husky_SCOMUtilities.PERFORMANCE_TYPE_BASELINE) {
-				// System.debug('BASELINE');
 				cpuAvg = performance.Avg_Metric_Value__c;
 				cpuThreshold = performance.Max_Metric_Value__c;
 			} else if (performance.Type__c == Husky_SCOMUtilities.PERFORMANCE_TYPE_REALTIME) {
-				// System.debug('REALTIME');
 				cpuActual = performance.Max_Metric_Value__c; //NOTE current values are not stored in Current_Metric_Value__c
 			}
 		}

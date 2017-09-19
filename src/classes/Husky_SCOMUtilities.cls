@@ -3,11 +3,6 @@ public class Husky_SCOMUtilities {
 	/******************************
 	Performance Dashboard constants
 	******************************/
-	public static String PERFORMANCE_LIST_QUERY_STRING = 'SELECT Avg_Metric_Value__c, Current_Metric_Value__c, Max_Metric_Value__c'
-														+ ', External_Key__c, Metric__c, Type__c, Unit__c, Server__c, Server__r.Id'
-														+ ', Server__r.Criticality__c, Server__r.Applications__c, Server__r.Name'
-														+ ' FROM SCOM_Performance__c ORDER BY Type__c ASC';
-
 	public static final String PERFORMANCE_UNIT_CPU 	= '%';
 	public static final String PERFORMANCE_UNIT_MEMORY 	= 'MB';
 
@@ -23,6 +18,16 @@ public class Husky_SCOMUtilities {
 	public static final String PERFORMANCE_GREEN 	= 'green';
 	public static final String PERFORMANCE_ORANGE	= 'orange';
 	public static final String PERFORMANCE_RED 		= 'red';
+
+	public static String PERFORMANCE_LIST_QUERY_STRING = 'SELECT Avg_Metric_Value__c, Current_Metric_Value__c, Max_Metric_Value__c'
+														+ ', External_Key__c, Metric__c, Type__c, Unit__c, Server__c, Server__r.Id'
+														+ ', Server__r.Criticality__c, Server__r.Applications__c, Server__r.Name'
+														+ ' FROM SCOM_Performance__c'
+														+ ' WHERE Metric__c != \'' + PERFORMANCE_METRIC_FREESPACE + '\''
+														+ ' AND Metric__c != \'' + PERFORMANCE_METRIC_TOTALSPACE + '\''
+														+ ' AND Metric__c != \'' + PERFORMANCE_METRIC_USEDSPACE + '\''
+														+ ' ORDER BY Type__c ASC';
+
 
 	/****************
 	Trigger constants
