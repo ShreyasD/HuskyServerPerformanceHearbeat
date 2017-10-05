@@ -43,5 +43,14 @@
         <members>SCOM_Performance_Dashboard</members>
         <name>CustomTab</name>
     </types>
+    <types>
+        <members>HOG_Data_Loader</members>
+        <members>SCOM_Viewer</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
     <version>37.0</version>
 </Package>
