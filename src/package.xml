@@ -6,6 +6,7 @@
         <members>Husky_SCOMUtilities</members>
         <members>Husky_ServiceNowApiUtils</members>
         <members>Husky_ServiceNowAvailabilityService</members>
+        <members>Husky_ServiceNowChangeRequestService</members>
         <members>Husky_ServiceNowPerformanceService</members>
         <name>ApexClass</name>
     </types>
