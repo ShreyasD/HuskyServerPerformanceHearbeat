@@ -3,11 +3,17 @@
     <types>
         <members>Husky_SCOMChangeRequestByServerCtrl</members>
         <members>Husky_SCOMDashboardController</members>
+        <members>Husky_SCOMDashboardControllerTest</members>
         <members>Husky_SCOMUtilities</members>
+        <members>Husky_SCOM_TestData</members>
         <members>Husky_ServiceNowApiUtils</members>
         <members>Husky_ServiceNowAvailabilityService</members>
+        <members>Husky_ServiceNowAvailabilityServiceTest</members>
         <members>Husky_ServiceNowChangeRequestService</members>
+        <members>Husky_ServiceNowChangeRequestService</members>
+        <members>Husky_ServiceNowChangeRequestServiceTest</members>
         <members>Husky_ServiceNowPerformanceService</members>
+        <members>Husky_ServiceNowPerformanceServiceTest</members>
         <name>ApexClass</name>
     </types>
     <types>
