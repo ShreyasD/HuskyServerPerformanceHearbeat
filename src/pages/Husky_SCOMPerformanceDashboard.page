@@ -80,9 +80,18 @@
         text-align: center !important;
     }
 
-    /*! Status colours */
-    /*#down    { background-color: red; }
-    #up  { background-color: green; }*/
+    .criticalityTitleText {
+      margin-left: 3px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .criticalityTitleText {
+        margin-left: 3px;
+        display:block;
+        width: 100px;
+        word-wrap:break-word;
+      }
+    }
   </style>
 
   <script type="text/javascript">
@@ -158,7 +167,7 @@
               <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" id="chevronDown">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/utility-sprite/svg/symbols.svg#chevrondown')}"></use>
               </svg>
-              <span class="slds-truncate">
+              <span class="criticalityTitleText">
                 {!criticality}
               </span>
               <div id="performanceStatusIndCriticalityWrapper">
@@ -175,7 +184,7 @@
               </div>
             </button>
           </h3>
-          <div aria-hidden="false" class="slds-section__content serverList" id="expando-unique-id">
+          <div aria-hidden="false" class="slds-section__content serverList slds-scrollable" id="expando-unique-id">
             <table class="slds-table slds-table--bordered slds-table--cell-buffer">
               <thead>
                 <tr class="slds-text-title--caps">

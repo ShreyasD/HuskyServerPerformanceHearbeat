@@ -153,7 +153,7 @@
               </div>
             </button>
           </h3>
-          <div aria-hidden="false" class="slds-section__content serverList" id="expando-unique-id">
+          <div aria-hidden="false" class="slds-section__content serverList slds-scrollable" id="expando-unique-id">
             <table class="slds-table slds-table--bordered slds-table--cell-buffer">
               <thead>
                 <tr class="slds-text-title--caps">

@@ -63,7 +63,7 @@ global class Husky_ServiceNowChangeRequestService {
 	}
 
 	private static DateTime parseDateTime(String value) {
-		return (Datetime) JSON.deserialize('\"'+value+'\"', Datetime.class);
+		return (!String.isBlank(value)) ? (Datetime) JSON.deserialize('\"'+value+'\"', Datetime.class) : System.now();
 	}
 
 	private static List<Husky_ServiceNowApiUtils.Result> commitRecords() {
