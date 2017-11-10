@@ -1,0 +1,16 @@
+#Mapping values
+#Wed Nov 08 15:18:08 EST 2017
+model_id=Model_Id__c
+name=Name
+used_for=Environment__c
+os=Operating_System__c
+u_application=Applications__c
+external_id=External_Id__c
+u_cmdb_criticality=Criticality__c
+manufacturer=Manufacturer__c
+host_name=Host_Name__c
+sys_class_name=System_Class_Name__c
+os_version=Operating_System_Version__c
+sys_created_on=System_Created_On__c
+sys_created_by=System_Created_By__c
+short_description=Short_Description__c

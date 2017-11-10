@@ -40,8 +40,19 @@
     </types>
     <types>
         <members>SCOM_Availability_Dashboard</members>
+        <members>SCOM_Availability__c</members>
+        <members>SCOM_Change_Request__c</members>
         <members>SCOM_Performance_Dashboard</members>
+        <members>SCOM_Performance__c</members>
+        <members>SCOM_Server__c</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>SCOM_Availability__c-SCOM Availability Layout</members>
+        <members>SCOM_Change_Request__c-SCOM Change Request Layout</members>
+        <members>SCOM_Performance__c-SCOM Performance Layout</members>
+        <members>SCOM_Server__c-SCOM Server Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>HOG_Data_Loader</members>

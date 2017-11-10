@@ -1,0 +1,22 @@
+#Mapping values
+#Fri Nov 10 14:15:13 EST 2017
+\uFEFFname=Name
+urgency=Urgency__c
+u_source_type=Source_Type__c
+number=Change_Request_Number__c
+end_date=End_Date__c
+start_date=Start_Date__c
+state=State__c
+active=Active__c
+requested_by_date=Requested_By_Date__c
+u_project=Project__c
+parent=Parent__c
+change_request_hyperlink=Hyperlink__c
+opened_at=Opened_At__c
+u_is_approvers=Approvers__c
+short_description=Short_Description__c
+u_implementation_reviewers=Implementation_Reviewers__c
+cmdb_ci=Application__c
+approval=Approval__c
+opened_by=Opened_By__c
+priority=Priority__c

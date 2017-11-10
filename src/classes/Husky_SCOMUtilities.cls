@@ -61,7 +61,7 @@ public class Husky_SCOMUtilities {
 		Messaging.SingleEmailMessage[] emailList = new Messaging.SingleEmailMessage[]{};
 
 		for(SCOM_Availability__c availability : availabilityList) {
-			if(availability.Status__c == 'Down' && (oldMap.get(availability.Id) == null || oldMap.get(availability.Id).Status__c == 'Up')) {
+			if(availability.Status__c == 'Down' && (oldMap != null && oldMap.get(availability.Id) != null && oldMap.get(availability.Id).Status__c == 'Up')) {
 				serverIds.add(availability.Server__c);
 			}
 		}

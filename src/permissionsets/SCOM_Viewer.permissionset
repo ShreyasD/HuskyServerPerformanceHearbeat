@@ -341,4 +341,24 @@
         <tab>SCOM_Availability_Dashboard</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <tabSettings>
+        <tab>SCOM_Availability__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SCOM_Change_Request__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SCOM_Performance_Dashboard</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SCOM_Performance__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SCOM_Server__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>

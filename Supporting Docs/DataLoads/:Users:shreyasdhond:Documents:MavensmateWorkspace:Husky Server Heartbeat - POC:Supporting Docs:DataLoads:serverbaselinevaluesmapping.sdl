@@ -1,0 +1,12 @@
+#Mapping values
+#Fri Nov 10 14:09:01 EST 2017
+time=Time__c
+metric=Metric__c
+serverid=Server__r\:External_Id__c
+monitorInstance=Monitor_Instance__c
+type=Type__c
+maxvalue=Max_Metric_Value__c
+unit=Unit__c
+avgvalue=Avg_Metric_Value__c
+minvalue=Min_Metric_Value__c
+external\ id=External_Key__c

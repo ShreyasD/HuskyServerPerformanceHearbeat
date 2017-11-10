@@ -1,0 +1,288 @@
+"U_APPLICATION","EXTERNAL_ID","NAME","USED_FOR","HOST_NAME","MANUFACTURER","MODEL_ID","OS","OS_VERSION","SHORT_DESCRIPTION","SYS_CLASS_NAME","SYS_CREATED_ON","SYS_CREATED_BY","U_CMDB_CRITICALITY","ERROR","ERROR"
+"VMware vCenter Server","ARdrvcs01","ARdrvcs01","Production","ARSJVCS01","VMware","Unknown","GNU/Linux","3.0.101-0.7.19","201610 - Appliance: 351 VMWare VCentre Server Appliance. - VMWare virtual appliance","Linux Server","2016-01-19 13:16","janesl","(4) Business Critical","Duplicate external id specified: ardrvcs01","Duplicate external id specified: ardrvcs01"
+"VMware vCenter Server","ARDRVCS01","ARDRVCS01","Disaster recovery","ARDRVCS01","VMware","Unknown","GNU/Linux","","201610 - Appliance(Virtual): VMWare Virtual Centre for VMware Site Recovery Manager at DR site. - VMware virtual appliance","Linux Server","2016-03-22 12:55","janesl","(1) Non-Critical","Duplicate external id specified: ardrvcs01","Duplicate external id specified: ardrvcs01"
+"","ARHGAPP01","ARHGAPP01","Production","ARHGAPP01","HP","Unknown","Windows 2008 R2 Enterprise ","6.1","Henry Goodrich File Server","Windows Server","2014-04-08 5:48","wongpe","(1) Non-Critical","Duplicate external id specified: arhgapp01","Duplicate external id specified: arhgapp01"
+"","ARHGAPP01","ARHGAPP01","","ARHGAPP01","HP","HP ProLiant DL385 G7","Windows 2008 R2 Enterprise ","6.1.7601","","Windows Server","2015-01-30 20:32","mid_husky","(1) Non-Critical","Duplicate external id specified: arhgapp01","Duplicate external id specified: arhgapp01"
+"OFM - Oil Field Manager (Western Canada)","BTL08090203","BTL08090203","Production","BTL08090203","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","OFM License Server","Windows Server","2015-03-16 17:02","mid_husky","(5) Mission Critical","Duplicate external id specified: btl08090203","Duplicate external id specified: btl08090203"
+"","BTL08090203","BTL08090203","Production","BTL08090203","VMware inc","","Windows 2003 Enterprise","5.2.3790","","Windows Server","2013-04-15 10:30","hashmm","(1) Non-Critical","Duplicate external id specified: btl08090203","Duplicate external id specified: btl08090203"
+"OFM - Oil Field Manager (Western Canada)","BTL08090203","BTL08090203","Production","BTL08090203","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","OFM Application Bitlock Server","Windows Server","2012-09-27 9:50","mid_husky","(1) Non-Critical","Duplicate external id specified: btl08090203","Duplicate external id specified: btl08090203"
+"WellCAD","BTL09032605","BTL09032605","Production","btl09032605","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","WellCad License Bitlock Server","Windows Server","2013-05-03 17:02","mid_husky","(4) Business Critical","Duplicate external id specified: btl09032605","Duplicate external id specified: btl09032605"
+"WellCAD","btl09032605","btl09032605","Production","btl09032605","HP","Hewlett-Packard Company ProLiant DL120 G5 Server 533983-001","Windows 2008 R2 Standard ","5.2.3790","Bitlock Server - This one is a duplicate. Use upper case BTL09032605 in the CMDB - changing status of this CI to retired as the other server CI (virtual) is the right server","Windows Server","2013-08-09 17:03","mid_husky","(1) Non-Critical","Duplicate external id specified: btl09032605","Duplicate external id specified: btl09032605"
+"RokDoc","btl11060102","btl11060102","Production","btl11060102","VMware","VMware, Inc. VMware Virtual Platform","Windows 2000 Server","5","IKON RokDoc License Bitlock Server","Windows Server","2013-06-19 15:55","hashmm","(1) Non-Critical","Duplicate external id specified: btl11060102","Duplicate external id specified: btl11060102"
+"RokDoc","btl11060102","btl11060102","Production","btl11060102","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","5.1.2600","Bitlock Server","Windows Server","2014-02-17 17:04","mid_husky","(1) Non-Critical","Duplicate external id specified: btl11060102","Duplicate external id specified: btl11060102"
+"DM Content Server (ECM)","CGWAPP104DV","CGWAPP104DV","Development","CGWAPP104DV","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","DM-DV01","Windows Server","2012-12-17 13:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp104dv","Duplicate external id specified: cgwapp104dv"
+"DM Content Server (ECM)","CGWAPP104DV","CGWAPP104DV","Development","CGWAPP104DV","","Unknown","Windows 2008 R2 Standard ","6.1","I think this may be a duplicate - assigned to App anyway","Windows Server","2015-03-16 12:24","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp104dv","Duplicate external id specified: cgwapp104dv"
+"opsInfo (Calgary)","CGWAPP1208PS","CGWAPP1208PS","Production Support (PS)","CGWAPP1208PS","VMware, Inc.","Unknown","Windows 2012 R2 Standard","6.3.9600","updated based on ticket INC0669150","Windows Server","2016-10-25 14:58","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp1208ps","Duplicate external id specified: cgwapp1208ps"
+"opsInfo (Calgary)","CGWAPP1208PS","CGWAPP1208PS","Production Support (PS)","","VMware, Inc.","VMware, Inc. VMware Virtual Platform","","","","Windows Server","2016-11-08 11:13","kumarsr","(1) Non-Critical","Duplicate external id specified: cgwapp1208ps","Duplicate external id specified: cgwapp1208ps"
+"","cgwapp369ts","cgwapp369ts","Development","CGWAPP369TS","","Unknown","Windows 2008 R2 Enterprise ","6.1","","Windows Server","2014-06-30 13:26","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp369ts","Duplicate external id specified: cgwapp369ts"
+"DM Content Server (ECM)","CGWAPP369TS","CGWAPP369TS","Test","CGWAPP369TS","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","DM-TS06-CSF - CS Front End Server","Windows Server","2013-06-11 10:28","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp369ts","Duplicate external id specified: cgwapp369ts"
+"","CGWAPP397PD","CGWAPP397PD","","CGWAPP397PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","","Microsoft Windows Server 2008 R2 (64-bit","2016_confirmed_vcenter","Windows Server","2016-12-06 16:02","sethuk","(4) Business Critical","Duplicate external id specified: cgwapp397pd","Duplicate external id specified: cgwapp397pd"
+"Mule Management Console, MuleESB","CGWAPP397PD","CGWAPP397PD","Production","CGWAPP397PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","CGWAPP397PD","Windows Server","2013-07-29 13:04","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp397pd","Duplicate external id specified: cgwapp397pd"
+"DM Content Server (ECM), OpenText Livelink Monitoring Agent (LLMA)","CGWAPP610PD","CGWAPP610PD","Production","CGWAPP610PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","DM-PD-CSG Content Server Agents
+
+
+
+Location DC: Airdrie (DR)
+
+","Windows Server","2014-07-11 14:20","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwapp610pd","Duplicate external id specified: cgwapp610pd"
+"DM Content Server (ECM)","CGWAPP610PD","CGWAPP610PD","Production","cgwapp610pd","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1","cgwapp610pd","Windows Server","2014-04-07 13:57","gruenp","(5) Mission Critical","Duplicate external id specified: cgwapp610pd","Duplicate external id specified: cgwapp610pd"
+"","CGWAPP969PD","CGWAPP969PD","Production","cgwapp969pd","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1","What's Up Gold Application server","Windows Server","2015-09-09 13:27","macneis","(5) Mission Critical","Duplicate external id specified: cgwapp969pd","Duplicate external id specified: cgwapp969pd"
+"What's up Gold Network Monitoring","CGWAPP969PD","CGWAPP969PD","Production","CGWAPP969PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1","What's up Gold in the Blue Zone","Windows Server","2015-05-26 14:55","hashmm","(5) Mission Critical","Duplicate external id specified: cgwapp969pd","Duplicate external id specified: cgwapp969pd"
+"PlantManager (Lima)","CGWBTL013PD","CGWBTL013PD","Production","CGWBTL013PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","","Windows 2008 Standard R2","Bitlock License server
+
+2016_confirmed_vcenter
+
+","Windows Server","2013-09-25 22:34","system","(2) Productivity Important","Duplicate external id specified: cgwbtl013pd","Duplicate external id specified: cgwbtl013pd"
+"","CGWBTL013PD","CGWBTL013PD","Production","CGWBTL013PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","CHG000000262596","Windows Server","2012-11-12 17:18","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwbtl013pd","Duplicate external id specified: cgwbtl013pd"
+"Interactive Petrophysics","cgwbtl510pd","cgwbtl510pd","Production","cgwbtl510pd","HP","Hewlett-Packard Company ProLiant DL120 G5 Server 533983-001","Windows 2003 Standard","5.2.3790","Not Reported","Windows Server","2012-06-19 15:20","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwbtl510pd","Duplicate external id specified: cgwbtl510pd"
+"Interactive Petrophysics","CGWBTL510PD","CGWBTL510PD","Production","CGWBTL510PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Interactive Petrophysics License Server","Windows Server","2013-11-04 13:03","mid_husky","(4) Business Critical","Duplicate external id specified: cgwbtl510pd","Duplicate external id specified: cgwbtl510pd"
+"SharePoint (ECM)","CGWSQL160PD","CGWSQL160PD","Production","CGWSQL160PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1.7601","Sharepoint 2010 ECM Prod Primary","Windows Server","2015-03-30 12:22","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwsql160pd","Duplicate external id specified: cgwsql160pd"
+"SharePoint (ECM), Management System Documents Portal (MSDP), Social Club Store (SharePoint), HOIMS Lessons Learned Portal, Winshuttle","CGWSQL160PD","CGWSQL160PD","Production","CGWSQL160PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","ECM - Sharepoint XL-DB
+
+Datacenter- Airdrie","Windows Server","2013-03-04 13:20","mid_husky","(4) Business Critical","Duplicate external id specified: cgwsql160pd","Duplicate external id specified: cgwsql160pd"
+"SharePoint (ECM)","CGWSQL240NP","CGWSQL240NP","Staging","cgwsql240np","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","SharePoint XL-DB
+
+Datacenter - Airdrie","Windows Server","2013-04-01 13:11","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwsql240np","Duplicate external id specified: cgwsql240np"
+"SharePoint (ECM)","cgwsql240np","cgwsql240np","Test","cgwsql240np","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1.7601","Sharepoint 2010 ECM Test Primary","Windows Server","2013-04-04 14:40","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwsql240np","Duplicate external id specified: cgwsql240np"
+"SeisWare","CGWSQL339PD","CGWSQL339PD","Production","CGWSQL339PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1","SQL server for Seisware - G&G application - 40 users","Windows Server","2014-11-04 16:22","hashmm","(4) Business Critical","Duplicate external id specified: cgwsql339pd","Duplicate external id specified: cgwsql339pd"
+"SeisWare","CGWSQL339PD","CGWSQL339PD","Production","CGWSQL339PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Microsoft Windows Server 2008 R2 Standard
+
+SQL server for Seisware - G&G application - 40 users","Windows Server","2012-09-27 9:51","mid_husky","(1) Non-Critical","Duplicate external id specified: cgwsql339pd","Duplicate external id specified: cgwsql339pd"
+"","cgydrum01","cgydrum01","","CGYDRUM01","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1.7601","","Windows Server","2014-03-18 13:44","mid_husky","(1) Non-Critical","Duplicate external id specified: cgydrum01","Duplicate external id specified: cgydrum01"
+"Exchange 2010","CGYDRUM01","CGYDRUM01","Disaster recovery","CGYDRUM01","HP","Hewlett-Packard Company ProLiant BL460c G8 Server Blade 666157-B21","Windows 2008 R2 Enterprise","6.1.7601","Microsoft Windows Server 2008 R2 Enterprise 
+
+
+
+Exchange 2010 SP3 Unified Messaging Communications server
+
+
+
+Datacenter - Colo","Windows Server","2014-06-25 14:40","mid_husky","(1) Non-Critical","Duplicate external id specified: cgydrum01","Duplicate external id specified: cgydrum01"
+"Exchange 2010","CGYWCPCH01","CGYWCPCH01","Production","cgywcpch01","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Exchange 2010 CAS & Hub server","Windows Server","2012-07-24 17:10","mid_husky","(5) Mission Critical","Duplicate external id specified: cgywcpch01","Duplicate external id specified: cgywcpch01"
+"","cgywcpch01","cgywcpch01","","cgywcpch01","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.0.6002","HDMS LES Front End Server","Windows Server","2013-08-06 17:17","mid_husky","(1) Non-Critical","Duplicate external id specified: cgywcpch01","Duplicate external id specified: cgywcpch01"
+"SAP Legacy SolMan Technical Monitoring","cls023","cls023","Production","cls023","VMware","","Linux SuSE","10","SAP Solution Mgr (SMP) - Legacy
+
+Confirm to be in Unix_Class
+
+","Linux Server","2012-06-19 18:49","mid_husky","(5) Mission Critical","Duplicate external id specified: cls023","Duplicate external id specified: cls023"
+"SAP Legacy SolMan Technical Monitoring","cls023","cls023","Production","cls023","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","GNU/Linux","10","Linux cls023 2.6.16.60-0.62.1-smp #1 SMP Mon Apr 12 18:53:46 UTC 2010 x86_64 x86_64 x86_64 GNU/Linux
+
+","Linux Server","2013-05-08 18:43","mid_husky","(1) Non-Critical","Duplicate external id specified: cls023","Duplicate external id specified: cls023"
+"SUSE Manager","CLS030","CLS030","Production","cls030","HP","Hewlett-Packard Company ProLiant DL385 G1 Server 391108-xx1","Linux SuSE","10","Yast2 (DR Linux Mgmt)","Linux Server","2012-11-22 14:08","mid_husky","(1) Non-Critical","Duplicate external id specified: cls030","Duplicate external id specified: cls030"
+"","cls030","cls030","Test","","","Unknown","GNU/Linux","","","Linux Server","2014-08-01 14:04","mid_husky","(1) Non-Critical","Duplicate external id specified: cls030","Duplicate external id specified: cls030"
+"","CLS090","CLS090","Production","","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Linux SuSE","10","Linux cls090 2.6.16.60-0.62.1-smp #1 SMP Mon Apr 12 18:53:46 UTC 2010 x86_64 x86_64 x86_64 GNU/Linux
+","Linux Server","2013-05-13 17:15","mid_husky","(1) Non-Critical","Duplicate external id specified: cls090","Duplicate external id specified: cls090"
+"SAP BI PORTAL (Part of SAP NetWeaver Business Warehouse)","CLS090","CLS090","Production","cls090","VMware, Inc.","Unknown","Linux SuSE","10","Legacy SAP ERP
+
+Confirm to be in Unix_Class
+
+","Linux Server","2014-04-14 15:23","mid_husky","(1) Non-Critical","Duplicate external id specified: cls090","Duplicate external id specified: cls090"
+"","CLS090","CLS090","Production","cls090-new","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Linux SuSE","2.6.16.60-0.62.1-smp","SAP ERP","Linux Server","2012-06-19 15:32","mid_husky","(5) Mission Critical","Duplicate external id specified: cls090","Duplicate external id specified: cls090"
+"","CLS243","CLS243","","cls243","HP","Unknown","Linux Red Hat","5.11","","Linux Server","2014-08-11 15:27","mid_husky","(1) Non-Critical","Duplicate external id specified: cls243","Duplicate external id specified: cls243"
+"HEIGIS Desktop Extension, HEIGIS Map Services, HEIGIS Scheduled Job (PRO C Program), HEIGISNitro, IHS Scheduled Job (PRO C Program), OFM - Oil Field Manager (Western Canada), Geographix, ENVOY, Compensatory Royalty, GIS Job Tracking, Boundaries Manager, APPIAN (Prod Ctl REQ Review - Ramsha's Del Ready), Appian BPM Platform, PL100 Report, Directional Survey Station Data Extractor, Location Converter, Upstream Datamart, IHSD (Public Data)","CLS243","CLS243","Production","cls243","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Linux Red Hat","5.11","HEIGIS Production.
+
+Confirm to be in Unix_Class
+
+","Linux Server","2012-06-19 15:19","mid_husky","(1) Non-Critical","Duplicate external id specified: cls243","Duplicate external id specified: cls243"
+"Cisco Information Server (CIS)","CLS243","CLS243","Production","","HP","Hewlett-Packard Company ProLiant BL460c G7 Server Blade 603251-B21","Linux Red Hat","5.11","This is not CLS243. Duplicate record. IP points to different server -> cls350 ","Server","2013-04-12 13:38","mid_husky","(5) Mission Critical","Duplicate external id specified: cls243","Duplicate external id specified: cls243"
+"OmniSafe Client Server / Web Application, Spotfire, TRIPWIRE (Prod Ctl REQ Review), CarChip - FMS (HOG, Heavy Oil, Tucker, Pipelines), SKF Machine Suite","CLS244","CLS244","Production","","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Linux Red Hat","5.11","Oracle Production + Comprod - Common database for many apps
+
+Merak Reserves\Volts (voltsprd)
+
+Confirm to be in Unix_Class
+
+","Linux Server","2012-06-19 15:19","mid_husky","(5) Mission Critical","Duplicate external id specified: cls244","Duplicate external id specified: cls244"
+"Spotfire, TRIPWIRE (Prod Ctl REQ Review), CarChip - FMS (HOG, Heavy Oil, Tucker, Pipelines), SKF Machine Suite, OmniSafe Client Server / Web Application","CLS244","CLS244","Production","cls244","VMware, Inc.","Unknown","Linux Red Hat","5.11","Oracle Production + Comprod - Common database for many apps
+
+Merak Reserves\Volts (voltsprd)
+
+Confirm to be in Unix_Class","Linux Server","2014-04-28 15:38","mid_husky","(1) Non-Critical","Duplicate external id specified: cls244","Duplicate external id specified: cls244"
+"IPS (Integrated Pipeline System - Midstream)","CLS245","CLS245","","cls245","HP","Unknown","Linux Red Hat","5.11","","Linux Server","2014-06-16 15:21","mid_husky","(5) Mission Critical","Duplicate external id specified: cls245","Duplicate external id specified: cls245"
+"Oracle Recovery Manager(RMAN), SUSE Manager, SPI (formally inTools), Informatica, DBA - SQL, IPS (Integrated Pipeline System - Midstream)","CLS245","CLS245","Production","cls245","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux Red Hat","5.11","Oracle Production
+
+
+
+Applications
+
+Ecosys EPC Application
+
+Oracle Heterogeneous Services database - oracle connector to sql server 
+
+Oracle recovery manager for 10g databaess
+
+suse patch manager database
+
+informatica Facility Structure project
+
+Integrated Pipeline System
+
+SPI intools
+
+
+
+
+
+","Linux Server","2012-06-19 15:19","mid_husky","(1) Non-Critical","Duplicate external id specified: cls245","Duplicate external id specified: cls245"
+"","CLS250","CLS250","","cls250","HP","Unknown","Linux Red Hat","5.11","","Linux Server","2014-04-28 15:38","mid_husky","(2) Productivity Important","Duplicate external id specified: cls250","Duplicate external id specified: cls250"
+"Oracle Enterprise Manager","CLS250","CLS250","Production","cls250","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Linux Red Hat","5.11","Oracle OEM
+
+Confirm to be in Unix_Class
+
+","Linux Server","2012-06-19 15:19","mid_husky","(1) Non-Critical","Duplicate external id specified: cls250","Duplicate external id specified: cls250"
+"SAP BW (Business Warehouse)","CLS3005","CLS3005","Development","cls3005","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Central Instance Server / SAP Business","Linux Server","2014-03-10 9:06","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3005","Duplicate external id specified: cls3005"
+"","cls3005","cls3005","","cls3005","","Unknown","Linux SuSE","11","duplicate","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3005","Duplicate external id specified: cls3005"
+"SAP BW (Business Warehouse)","CLS3014","CLS3014","Development","cls3014","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Application Server / SAP Business Wa","Linux Server","2014-03-10 9:06","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3014","Duplicate external id specified: cls3014"
+"SAP BW (Business Warehouse)","cls3014","cls3014","Development","cls3014","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3014","Duplicate external id specified: cls3014"
+"SAP BW (Business Warehouse)","cls3015","cls3015","Development","cls3015","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3015","Duplicate external id specified: cls3015"
+"SAP BW (Business Warehouse)","CLS3015","CLS3015","Development","cls3015","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Application Server / SAP Business Wa","Linux Server","2014-03-10 9:06","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3015","Duplicate external id specified: cls3015"
+"SAP BI PORTAL (Part of SAP NetWeaver Business Warehouse)","CLS3016","CLS3016","Development","cls3016","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Central Instance Server / SAP BW Por - duplicate entry","Linux Server","2014-03-10 9:06","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3016","Duplicate external id specified: cls3016"
+"SAP CENTRAL PORTAL (Part of SAP NetWeaver Business Warehouse)","cls3016","cls3016","Development","cls3016","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3016","Duplicate external id specified: cls3016"
+"SAP Java Web Application Server","CLS3017","CLS3017","Development","cls3017","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Application Server / SAP web application server","Linux Server","2014-03-10 9:06","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3017","Duplicate external id specified: cls3017"
+"SAP Java Web Application Server","cls3017","cls3017","Development","cls3017","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3017","Duplicate external id specified: cls3017"
+"","cls3022","cls3022","Development","cls3022","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3022","Duplicate external id specified: cls3022"
+"","cls3022","cls3022","Development","cls3022","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Database Server / SAP web applicatio","Linux Server","2014-03-10 9:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3022","Duplicate external id specified: cls3022"
+"","cls3040","cls3040","Development","cls3040","","Unknown","Linux SuSE","11","SAP","Linux Server","2015-01-22 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3040","Duplicate external id specified: cls3040"
+"SAP BW (Business Warehouse)","cls3040","cls3040","Development","cls3040","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Central Instance Server / SAP Busine","Linux Server","2014-03-10 9:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3040","Duplicate external id specified: cls3040"
+"SAP Enterprise Portal (iConnect)","CLS3045","CLS3045","Sandbox","cls3045","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP Central Instance Server / SAP Enterprise Central Component","Linux Server","2014-03-10 9:13","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3045","Duplicate external id specified: cls3045"
+"","cls3045","cls3045","Development","cls3045","","Unknown","","","SAP","Linux Server","2014-11-13 17:08","mid_husky","(1) Non-Critical","Duplicate external id specified: cls3045","Duplicate external id specified: cls3045"
+"","CLS306","CLS306","","cls306","HP","Unknown","Linux Red Hat","5.11","Duplicate Entry","Linux Server","2014-04-14 15:17","mid_husky","(5) Mission Critical","Duplicate external id specified: cls306","Duplicate external id specified: cls306"
+"CMRF - Commodity Marketing Risk Framework, Trade Compliance (K3)","CLS306","CLS306","Production","cls306","HP","Hewlett-Packard Company ProLiant BL460c G7 Server Blade 603251-B21","Linux Red Hat","5.11","SAS -CMRF - PROD Database Server.
+
+201510 ZOI - Linux servers can be rebuilt / restored from snaps in less than an hour. This does not take into consideration the time required to reinstall apps/verify apps are working.
+
+Confirm to be in Unix_Class
+
+","Linux Server","2012-11-28 17:07","mid_husky","(1) Non-Critical","Duplicate external id specified: cls306","Duplicate external id specified: cls306"
+"SAP Legacy CLM - Contract Lifecycle Management","CLS320","CLS320","Production","cls320","VMware","VMware, Inc. VMware Virtual Platform","Linux SuSE","2.6.32.12-0.7-default","SAP CLM - Buy side server","Linux Server","2012-11-19 8:52","mid_husky","(5) Mission Critical","Duplicate external id specified: cls320","Duplicate external id specified: cls320"
+"SAP CLM","CLS320","CLS320","Production","cls320","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP CLM - Buy side server","Linux Server","2013-12-02 13:32","mid_husky","(1) Non-Critical","Duplicate external id specified: cls320","Duplicate external id specified: cls320"
+"Legacy SAP - BW - Basis","cls331","cls331","Development","cls331","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","2.6.32.12-0.7-default","SAP VSBX1CI1/VSBX1DB1","Linux Server","2012-12-07 13:34","mid_husky","(1) Non-Critical","Duplicate external id specified: cls331","Duplicate external id specified: cls331"
+"","cls331","cls331","Development","cls331","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","10","Legacy SAP DRT","Linux Server","2014-05-12 15:17","mid_husky","(1) Non-Critical","Duplicate external id specified: cls331","Duplicate external id specified: cls331"
+"SAP CLM","CLS335","CLS335","Development","cls335","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP MD1/MD3","Linux Server","2013-10-04 13:42","mid_husky","(1) Non-Critical","Duplicate external id specified: cls335","Duplicate external id specified: cls335"
+"SAP CLM","cls335","cls335","Test","cls335","VMware","VMware, Inc. VMware Virtual Platform","Linux SuSE","2.6.32.12-0.7-default","SAP CLM MD1/MD3","Linux Server","2012-12-14 13:34","mid_husky","(1) Non-Critical","Duplicate external id specified: cls335","Duplicate external id specified: cls335"
+"","COS005","COS005","","","Apple","Apple Mac Pro MacPro5,1","Mac OS 10 (OS/X)","OS X 10.8.4 (12E55)","","Server","2015-12-11 13:40","mid_husky","(1) Non-Critical","Duplicate external id specified: cos005","Duplicate external id specified: cos005"
+"","COS005","COS005","","","Apple","Apple Mac Pro MacPro5,1","Mac OS 10 (OS/X)","OS X 10.8.4 (12E55)","Darwin cgwmac02ts.hq.huskyenergy.com 12.4.0 Darwin Kernel Version 12.4.0: Wed May  1 17:57:12 PDT 2013; root:xnu-2050.24.15~1/RELEASE_X86_64 x86_64 ","Server","2013-09-02 8:54","mid_husky","(1) Non-Critical","Duplicate external id specified: cos005","Duplicate external id specified: cos005"
+"","CTXWIT1","CTXWIT1","","CTXWIT1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","","Windows Server","2015-01-29 17:35","mid_husky","(1) Non-Critical","Duplicate external id specified: ctxwit1","Duplicate external id specified: ctxwit1"
+"","CTXWIT1","CTXWIT1","Production","CTXWIT1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1","","Windows Server","2014-11-25 14:04","hashmm","(1) Non-Critical","Duplicate external id specified: ctxwit1","Duplicate external id specified: ctxwit1"
+"","CTXWIT2","CTXWIT2","","CTXWIT2","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","","Windows Server","2015-01-29 17:36","mid_husky","(1) Non-Critical","Duplicate external id specified: ctxwit2","Duplicate external id specified: ctxwit2"
+"","CTXWIT2","CTXWIT2","Production","CTXWIT2","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","","Windows Server","2014-11-25 14:11","hashmm","(1) Non-Critical","Duplicate external id specified: ctxwit2","Duplicate external id specified: ctxwit2"
+"Riverbed Appliance","cvapl039","cvapl039","Production","cvapl001","Riverbed Technology","VMware, Inc. VMware Virtual Platform","GNU/Linux","10.8.1","201610 - Appliance: Riverbed Steel Central Flow Gateway (Mike Kremer)","Linux Server","2014-05-15 10:53","lewisbe","(1) Non-Critical","Duplicate external id specified: cvapl039","Duplicate external id specified: cvapl039"
+"Common service platform collector","cvapl039","cvapl039","Development","cvapl039","Cisco Systems","VMware, Inc. VMware Virtual Platform","GNU/Linux","","201610 - Appliance(Virtual): CISCO Common service platform collector
+
+CISCO Common service platform collector appliance req INC0519832  (((201610 - Geoff Neish is not sure what this is)))","Linux Server","2016-01-25 14:58","lewisbe","(5) Mission Critical","Duplicate external id specified: cvapl039","Duplicate external id specified: cvapl039"
+"","cwf093","cwf093","Production","cwf093","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","Microsoft Software Update Server (SUS)","Windows Server","2014-01-01 17:05","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf093","Duplicate external id specified: cwf093"
+"","cwf093","cwf093","Production","cwf093","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","Microsoft Software Update Server (SUS)","Windows Server","2012-06-19 18:39","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf093","Duplicate external id specified: cwf093"
+"","CWF1058","CWF1058","Production","CWF1058","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","VDI - SCCM (Coutrney) - Duplicate entry","Windows Server","2012-09-27 9:50","mid_husky","(5) Mission Critical","Duplicate external id specified: cwf1058","Duplicate external id specified: cwf1058"
+"VDI - AccessPlus","CWF1058","CWF1058","Production","CWF1058","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","VDI - SCCM (Coutrney) MDT Server","Windows Server","2013-05-21 14:07","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf1058","Duplicate external id specified: cwf1058"
+"Citrix Corporate","CWF211","CWF211","Production","CWF211","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","SQL Server 2005 Database Host","Windows Server","2012-06-19 17:18","mid_husky","(4) Business Critical","Duplicate external id specified: cwf211","Duplicate external id specified: cwf211"
+"AVEVA NET","CWF211","CWF211","Production","CWF211","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","AVEVA - VNET VizStream Server","Windows Server","2012-06-19 17:18","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf211","Duplicate external id specified: cwf211"
+"","CWF229","CWF229","Production","CWF229","HP","HP ProLiant DL360 G5","Windows 2003 Enterprise","5.2.3790","Microsoft(R) Windows(R) Server 2003 Standard x64 Edition","Windows Server","2012-06-19 15:23","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf229","Duplicate external id specified: cwf229"
+"","CWF229","CWF229","Production","CWF229","HP","HP ProLiant DL360 G5","Windows 2003 Standard x64","5.2.3790","Microsoft(R) Windows(R) Server 2003 Standard x64 Edition","Windows Server","2014-09-29 17:18","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf229","Duplicate external id specified: cwf229"
+"Citrix Corporate","CWF245","CWF245","Production","CWF245","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2012 R2 Standard","6.3.9600","INC0383360	Citrix - Accumap - unable to launch ""\\cwf245.... file already exists""","Windows Server","2014-12-15 7:05","mid_husky","(4) Business Critical","Duplicate external id specified: cwf245","Duplicate external id specified: cwf245"
+"","cwf245","cwf245","Production","cwf245","HP","Hewlett-Packard Company ProLiant DL380 G4 Server 378735-xx1","Windows 2003 Enterprise","5.2.3790","Physical server replace by P2V WCP VM server.
+
+Citrix File Server: Hosts the following shares
+
+
+
+\\cwf245\Applications - Storage for all Citrix application source files and scripts
+
+\\cwf245\CitrixHome - Server 2003 Roaming User Profiles
+
+\\cwf245\TSProf_1 - Server 2008 R2 Roaming User Profiles
+
+\\cwf245\TSProf_2 - Server 2008 R1 Roaming User Profiles","Windows Server","2012-06-19 18:39","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf245","Duplicate external id specified: cwf245"
+"Active Directory, DNS Internal","cwf252","cwf252","Production","cwf252","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Windows 2003 Standard x64","5.2.3790","AD Controller - HQ.huskyenergy.com","Windows Server","2012-06-19 17:07","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf252","Duplicate external id specified: cwf252"
+"Active Directory, DNS Internal","CWF252","CWF252","Production","CWF252","HP","Hewlett-Packard Company ProLiant BL460c G6 Server Blade 507778-B21","Windows 2008 R2 Enterprise","6.1.7601","DFS, DCs related","Windows Server","2015-10-06 9:38","mid_husky","(5) Mission Critical","Duplicate external id specified: cwf252","Duplicate external id specified: cwf252"
+"VMware vCenter Server","CWF3000","CWF3000","Production","CWF3000","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","W2K8R2-server-using-embedded OS","Windows Server","2015-02-18 0:46","mid_husky","(5) Mission Critical","Duplicate external id specified: cwf3000","Duplicate external id specified: cwf3000"
+"","CWF3000","CWF3000","Production","CWF3000","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Vblock#1 AMP Stack vCenter","Windows Server","2013-02-21 16:26","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf3000","Duplicate external id specified: cwf3000"
+"VDI - AccessPlus","CWF3120","CWF3120","Production","CWF3120","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","","Windows Server","2014-07-15 14:38","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf3120","Duplicate external id specified: cwf3120"
+"DFS","CWF3120","CWF3120","Production","cwf3120","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","DFS
+
+2016_confirmed_vcenter
+
+","Windows Server","2013-02-13 17:45","mid_husky","(5) Mission Critical","Duplicate external id specified: cwf3120","Duplicate external id specified: cwf3120"
+"AVEVA PDMS","CWF397","CWF397","Production","CWF397","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","This server is hosted in WCP_DMZ zone.
+
+PDMS
+
+2016_confirmed_vcenter
+
+","Windows Server","2013-07-31 14:42","mid_husky","(2) Productivity Important","Duplicate external id specified: cwf397","Duplicate external id specified: cwf397"
+"AVEVA PDMS","CWF397","CWF397","Production","CWF397","VMware inc","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1","PDMS server","Windows Server","2013-02-26 14:49","hashmm","(1) Non-Critical","Duplicate external id specified: cwf397","Duplicate external id specified: cwf397"
+"","CWF415","CWF415","","","","Unknown","Windows 2003 Enterprise","5.2","HEIGIS Lite","Windows Server","2014-01-07 16:13","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf415","Duplicate external id specified: cwf415"
+"","CWF415","CWF415","Test","CWF415","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1.7601","HEIGIS Lite","Windows Server","2012-06-19 15:22","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf415","Duplicate external id specified: cwf415"
+"","cwf465.hq","cwf465.hq","Production","cwf465","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard","5.2.3790","Unknown","Windows Server","2012-06-19 17:11","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf465.hq","Duplicate external id specified: cwf465.hq"
+"","cwf465.hq","cwf465.hq","Production","cls010","","","Windows 2003 Enterprise","2.6.18-348.4.1.el5","Subversion Repository","Linux Server","2013-05-14 17:15","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf465.hq","Duplicate external id specified: cwf465.hq"
+"MOC -  Retired (Janaury 2016)","CWF744","CWF744","Development","CWF744","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard x64","5.2.3790","Stature DEV - Dyadem (MOC)","Windows Server","2012-06-19 15:18","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf744","Duplicate external id specified: cwf744"
+"Unknown (Prod Ctl Review)","CWF744","CWF744","","CWF744","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Standard x64","5.2.3790","","Windows Server","2015-03-09 17:32","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf744","Duplicate external id specified: cwf744"
+"McAfee ePolicy Orchestrator Corp","CWF828","CWF828","Production","CWF828","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","EPO","Windows Server","2012-06-19 17:11","mid_husky","(1) Non-Critical","Duplicate external id specified: cwf828","Duplicate external id specified: cwf828"
+"McAfee ePolicy Orchestrator Corp","CWF828","CWF828","Production","CWF828","","Unknown","Windows 2008 R2 Enterprise ","6.1","EPO related?","Windows Server","2015-04-01 0:21","mid_husky","(5) Mission Critical","Duplicate external id specified: cwf828","Duplicate external id specified: cwf828"
+"","hostname: Unknown host
+","hostname: Unknown host
+","","hostname: Unknown host
+","","Unknown","Linux Red Hat","2.6.18-398.el5","","Linux Server","2014-10-27 7:04","mid_husky","(1) Non-Critical","Duplicate external id specified: hostname: unknown host","Duplicate external id specified: hostname: unknown host"
+"","hostname: Unknown host","hostname: Unknown host","","hostname: Unknown host","","Unknown","Linux Red Hat","2.6.32-431.29.2.el6.x86_64","","Linux Server","2014-10-27 7:04","mid_husky","(1) Non-Critical","Duplicate external id specified: hostname: unknown host","Duplicate external id specified: hostname: unknown host"
+"","hostname: Unknown host","hostname: Unknown host","","hostname: Unknown host","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux Red Hat","6.4","","Linux Server","2015-08-20 12:37","mid_husky","(1) Non-Critical","Duplicate external id specified: hostname: unknown host","Duplicate external id specified: hostname: unknown host"
+"","hostname: Unknown host","hostname: Unknown host","","hostname: Unknown host","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux Red Hat","5.9","","Linux Server","2015-08-13 12:36","mid_husky","(1) Non-Critical","Duplicate external id specified: hostname: unknown host","Duplicate external id specified: hostname: unknown host"
+"eDirectory","HUSKYDEV1","HUSKYDEV1","Development","","HP","Hewlett-Packard Company ProLiant DL380 G3 Server 310587-xx1","Netware","6","201609 - Decommission as of Aug 24, 2015  -  INC0595224
+
+Novell Open Enterprise Server, NetWare 6.5
+
+","Netware Server","2013-10-02 17:10","mid_husky","(1) Non-Critical","Duplicate external id specified: huskydev1","Duplicate external id specified: huskydev1"
+"","HUSKYDEV1","HUSKYDEV1","Production","","","","","","","Server","2012-06-19 18:42","mid_husky","(1) Non-Critical","Duplicate external id specified: huskydev1","Duplicate external id specified: huskydev1"
+"","HUSKYDEV3","HUSKYDEV3","","","","Unknown","Netware","6","Novell Open Enterprise Server, NetWare 6.5","Netware Server","2013-10-02 17:10","mid_husky","(1) Non-Critical","Duplicate external id specified: huskydev3","Duplicate external id specified: huskydev3"
+"","huskydev3","huskydev3","Production","","","","","","","Server","2012-06-19 18:39","mid_husky","(1) Non-Critical","Duplicate external id specified: huskydev3","Duplicate external id specified: huskydev3"
+"Exchange 2010","LIMREFCH01","LIMREFCH01","Production","LIMREFCH01","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Lima Exchange 2010 SP3 CAS and Hub server","Windows Server","2014-06-05 9:23","mid_husky","(5) Mission Critical","Duplicate external id specified: limrefch01","Duplicate external id specified: limrefch01"
+"","limrefch01","limrefch01","Production","","","","","","Exchange 2010 CAS & Hub server","Windows Server","2013-03-07 13:33","perrer","(1) Non-Critical","Duplicate external id specified: limrefch01","Duplicate external id specified: limrefch01"
+"Exchange 2010","LIMREFMBX01","LIMREFMBX01","Production","LIMREFMBX01","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Lima Exchange 2010 SP3 Mailbox server","Windows Server","2014-06-05 9:23","mid_husky","(5) Mission Critical","Duplicate external id specified: limrefmbx01","Duplicate external id specified: limrefmbx01"
+"","limrefmbx01","limrefmbx01","Production","","","","","","Exchange 2010 Mailbox server","Windows Server","2013-03-07 13:34","perrer","(1) Non-Critical","Duplicate external id specified: limrefmbx01","Duplicate external id specified: limrefmbx01"
+"opsInfo (Lima)","LIROPS1","LIROPS1","Production","LIROPS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Lima OpsEnvironmental Server","Windows Server","2014-10-29 10:23","mid_husky","(1) Non-Critical","Duplicate external id specified: lirops1","Duplicate external id specified: lirops1"
+"","LIROPS1","LIROPS1","","LIROPS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Lima OPS Environmental Server","Windows Server","2014-06-05 9:23","mid_husky","(4) Business Critical","Duplicate external id specified: lirops1","Duplicate external id specified: lirops1"
+"","LIRPI1","LIRPI1","","","Hewlett-Packard","Hewlett-Packard Company EliteDesk 800 G1 Series 800 G1 SFF","Windows 7 Enterprise","6.1.7601","","Windows Server","2015-01-29 18:02","technopedia_normalize","(5) Mission Critical","Duplicate external id specified: lirpi1","Duplicate external id specified: lirpi1"
+"PI Server (Lima)","LIRPI1","LIRPI1","Production","LIRPI1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2012 R2 Standard","6.3.9600","Lima PI Server","Windows Server","2014-06-05 9:23","mid_husky","(1) Non-Critical","Duplicate external id specified: lirpi1","Duplicate external id specified: lirpi1"
+"System Center Operations Manager 2012 R2 (SCOM)","LIRSCOM1","LIRSCOM1","Production","LIRSCOM1","","Unknown","","","SCOM - LIMA Gateway Server","Windows Server","2016-09-12 15:43","sethuk","(2) Productivity Important","Duplicate external id specified: lirscom1","Duplicate external id specified: lirscom1"
+"SCOM","LIRSCOM1","LIRSCOM1","","LIRSCOM1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2012 R2 Standard","6.3.9600","Lima SCOM Server","Windows Server","2014-06-05 9:23","mid_husky","(1) Non-Critical","Duplicate external id specified: lirscom1","Duplicate external id specified: lirscom1"
+"Bently System1 (Lima)","LIRSQL2","LIRSQL2","Production","LIRSQL2","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Lima SQL Server","Windows Server","2014-06-05 9:23","mid_husky","(1) Non-Critical","Duplicate external id specified: lirsql2","Duplicate external id specified: lirsql2"
+"","LIRSQL2","LIRSQL2","","","VMware","Unknown","Windows Server 2008 Standard x64","6.1","","Windows Server","2015-02-01 8:38","technopedia_normalize","(4) Business Critical","Duplicate external id specified: lirsql2","Duplicate external id specified: lirsql2"
+"VortalBliss (Lima)","LIRVBLS1","LIRVBLS1","Production","LIRVBLS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2012 R2 Standard","6.3.9600","Lima cBliss Server","Windows Server","2015-11-18 10:47","mid_husky","(5) Mission Critical","Duplicate external id specified: lirvbls1","Duplicate external id specified: lirvbls1"
+"VortalBliss (Lima)","LIRVBLS1","LIRVBLS1","Production","LIRVBLS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Lima Vortal Bliss Server","Windows Server","2014-06-05 9:23","mid_husky","(1) Non-Critical","Duplicate external id specified: lirvbls1","Duplicate external id specified: lirvbls1"
+"","LIRWSUS1","LIRWSUS1","","LIRWSUS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Lima WSUS Server","Windows Server","2014-09-30 13:33","mid_husky","(1) Non-Critical","Duplicate external id specified: lirwsus1","Duplicate external id specified: lirwsus1"
+"","LIRWSUS1","LIRWSUS1","","LIRWSUS1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2012 R2 Standard","6.3.9600","Lima WSUS Server","Windows Server","2015-03-25 10:39","mid_husky","(1) Non-Critical","Duplicate external id specified: lirwsus1","Duplicate external id specified: lirwsus1"
+"","lnf001new.hq","lnf001new.hq","","","","Unknown","Netware","","","Netware Server","2014-07-16 8:17","mid_husky","(1) Non-Critical","Duplicate external id specified: lnf001new.hq","Duplicate external id specified: lnf001new.hq"
+"","lnf001new.hq","lnf001new.hq","Production","","HP","","Netware","","Novell main server at Husky Place","Netware Server","2013-11-08 12:20","mid_husky","(1) Non-Critical","Duplicate external id specified: lnf001new.hq","Duplicate external id specified: lnf001new.hq"
+"Lync 2013","LSBASHLU","LSBASHLU","Production","LSBASHLU","Sonus Networks","Unknown","Windows 2008 R2 Standard","6.1.7601","201610 - Appliance(Hardware): Lync 2013 SBA - Survivable Branch Appliance - Lloyd Upgrader - DR","Windows Server","2016-06-23 9:31","mid_husky","(5) Mission Critical","Duplicate external id specified: lsbashlu","Duplicate external id specified: lsbashlu"
+"Lync 2013","LSBASHLU","LSBASHLU","Production","LSBASHLU","RADISYS CORPORATION","RADISYS CORPORATION Calpella Platform","Windows 2008 R2 Standard","6.1.7601","201610 - Appliance(Hardware): Lync 2013 SBA - Survivable Branch Appliance - Shekou - DR","Windows Server","2016-07-21 10:57","mid_husky","(5) Mission Critical","Duplicate external id specified: lsbashlu","Duplicate external id specified: lsbashlu"
+"Lync 2013","LSBASHPL","LSBASHPL","Production","LSBASHPL","Sonus Networks","RADISYS CORPORATION Calpella Platform","Windows 2008 R2 Standard","6.1.7601","201610 - Appliance(Hardware): Lync 2013 SBA - Survivable Branch Appliance - Husky Place - DR","Windows Server","2016-06-23 9:18","mid_husky","(4) Business Critical","Duplicate external id specified: lsbashpl","Duplicate external id specified: lsbashpl"
+"Lync 2013","LSBASHPL","LSBASHPL","Production","LSBASHPL","Sonus Networks","RADISYS CORPORATION Calpella Platform","Windows 2008 R2 Standard","6.1.7601","201610 - Appliance(Hardware): Lync 2013 SBA - Survivable Branch Appliance - Husky Place - DR","Windows Server","2016-06-23 9:50","mid_husky","(5) Mission Critical","Duplicate external id specified: lsbashpl","Duplicate external id specified: lsbashpl"
+"","MAC12020268","MAC12020268","","","Apple","Apple MacBook Air MC96xLL/A","Mac OS 10 (OS/X)","OS X 10.9.5 (13F1134)","","Server","2015-11-18 10:08","mid_husky","(1) Non-Critical","Duplicate external id specified: mac12020268","Duplicate external id specified: mac12020268"
+"","MAC12020268","MAC12020268","","","Apple","Apple MacBook Air MC96xLL/A","Mac OS 10 (OS/X)","OS X 10.9.5 (13F1507)","","Server","2015-01-21 16:48","mid_husky","(1) Non-Critical","Duplicate external id specified: mac12020268","Duplicate external id specified: mac12020268"
+"","ROBS-MACBOOK-AIR.LOCAL","ROBS-MACBOOK-AIR.LOCAL","","","Apple","Hewlett-Packard Company Z400 Workstation FL861UT","Mac OS 10 (OS/X)","Mac OS X 10.7.5 (11G63)","Z400","Server","2013-05-22 12:31","mid_husky","(1) Non-Critical","Duplicate external id specified: robs-macbook-air.local","Duplicate external id specified: robs-macbook-air.local"
+"","ROBS-MACBOOK-AIR.LOCAL","ROBS-MACBOOK-AIR.LOCAL","","","Apple","Apple MacBook Air MC96xLL/A","Mac OS 10 (OS/X)","Mac OS X 10.7.5 (11G63)","","Server","2015-12-08 11:24","mid_husky","(1) Non-Critical","Duplicate external id specified: robs-macbook-air.local","Duplicate external id specified: robs-macbook-air.local"
+"DNS Internal, Active Directory","RRHDC002","RRHDC002","Production","RRHDC002","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","Ram River DC
+
+2016_confirmed_vcenter
+
+","Windows Server","2015-10-06 15:21","mid_husky","(5) Mission Critical","Duplicate external id specified: rrhdc002","Duplicate external id specified: rrhdc002"
+"Active Directory, DNS Internal","RRHDC002","RRHDC002","Production","RRHDC002","VMware inc","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard ","6.1.7601","20160606 - Set as retired, as duplicate with more info exists.  As per recommendation from Lori McNally
+
+Ram River DC","Windows Server","2013-03-01 14:21","hashmm","(1) Non-Critical","Duplicate external id specified: rrhdc002","Duplicate external id specified: rrhdc002"
+"CITRIX Atlantic Offshore","STX007","STX007","Production","STX007","Hewlett-Packard","HP Compaq Business Desktop PC DX5150","Windows 2008 Enterprise ","5.1.2600","SeaRose FPSO","Windows Server","2014-03-12 14:40","mid_husky","(1) Non-Critical","Duplicate external id specified: stx007","Duplicate external id specified: stx007"
+"CITRIX Atlantic Offshore","STX007","STX007","Production","STX007","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 Enterprise","6.0.6002","SeaRose Citrix STX007","Windows Server","2014-03-12 14:40","mid_husky","(3) Business Important","Duplicate external id specified: stx007","Duplicate external id specified: stx007"
+"AR HDMS Livelink","SWF032","SWF032","Production","SWF032","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Enterprise","5.2.3790","Livelink HDMS Frontend server - OPENTEXT LIVELINK SERVER. DO NOT PATCH. WINDOWS 2003 SERVER.","Windows Server","2014-01-15 9:24","mid_husky","(5) Mission Critical","Duplicate external id specified: swf032","Duplicate external id specified: swf032"
+"","swf032","swf032","Production","","","","","","Livelink HDMS Frontend server","Windows Server","2013-02-12 16:34","wongpe","(1) Non-Critical","Duplicate external id specified: swf032","Duplicate external id specified: swf032"
+"Exchange 2010","SXCH10","SXCH10","Production","SXCH10","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Exchange 2010 SP3 CAS and HUB server","Windows Server","2014-01-15 9:16","mid_husky","(5) Mission Critical","Duplicate external id specified: sxch10","Duplicate external id specified: sxch10"
+"Exchange 2010","sxch10","sxch10","Production","sxch10","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1","Exchange 2010 CAS/HUB Array servers - sxch10 & sxch11","Windows Server","2014-01-02 8:09","janesl","(1) Non-Critical","Duplicate external id specified: sxch10","Duplicate external id specified: sxch10"
+"Exchange 2010","sxch11","sxch11","Production","sxch11","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise ","6.1","Exchange 2010 CAS/HUB Array servers - sxch10 & sxch11","Windows Server","2014-01-02 8:10","janesl","(5) Mission Critical","Duplicate external id specified: sxch11","Duplicate external id specified: sxch11"
+"Exchange 2010","SXCH11","SXCH11","Production","SXCH11","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Enterprise","6.1.7601","Exchange 2010 SP3 CAS and HUB server","Windows Server","2014-01-15 9:16","mid_husky","(1) Non-Critical","Duplicate external id specified: sxch11","Duplicate external id specified: sxch11"
+"","sxhub03","sxhub03","","","","Unknown","Windows 2003 Enterprise","5.2","","Windows Server","2014-01-15 9:24","mid_husky","(1) Non-Critical","Duplicate external id specified: sxhub03","Duplicate external id specified: sxhub03"
+"","sxhub03","sxhub03","","sxhub03","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Enterprise x64","5.2.3790","","Windows Server","2014-01-15 9:15","mid_husky","(1) Non-Critical","Duplicate external id specified: sxhub03","Duplicate external id specified: sxhub03"
+"","sxmbx03","sxmbx03","","sxmbx03","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2003 Enterprise x64","5.2.3790","","Windows Server","2014-01-15 9:15","mid_husky","(1) Non-Critical","Duplicate external id specified: sxmbx03","Duplicate external id specified: sxmbx03"
+"","sxmbx03","sxmbx03","","","","Unknown","Windows 2003 Enterprise","5.2","","Windows Server","2014-07-15 13:10","mid_husky","(1) Non-Critical","Duplicate external id specified: sxmbx03","Duplicate external id specified: sxmbx03"
+"DataParc/ParcView - Tucker","TLHSQL003PD","TLHSQL003PD","Production","TLHSQL003PD","VMware","Microsoft Corporation Virtual Machine","Windows 2008 R2 Standard ","6.1.7601","Dataparc","Windows Server","2013-08-21 10:40","macneis","(1) Non-Critical","Duplicate external id specified: tlhsql003pd","Duplicate external id specified: tlhsql003pd"
+"On the Pin Network","TLHSQL003PD","TLHSQL003PD","Production","TLHSQL003PD","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Windows 2008 R2 Standard","6.1.7601","On the Pin Network","Windows Server","2013-08-19 16:12","mid_husky","(1) Non-Critical","Duplicate external id specified: tlhsql003pd","Duplicate external id specified: tlhsql003pd"
+"SAP ADS (Adobe Document Services)","VSAD3CI1","VSAD3CI1","Development","vsad3ci1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","SAP
+
+Confirm to be in Unix_Class
+
+","Linux Server","2015-06-04 11:40","mid_husky","(1) Non-Critical","Duplicate external id specified: vsad3ci1","Duplicate external id specified: vsad3ci1"
+"SAP ADS (Adobe Document Services)","vsad3ci1","vsad3ci1","Development","vsad3db1","VMware, Inc.","VMware, Inc. VMware Virtual Platform","Linux SuSE","11","","Linux Server","2014-12-11 17:08","mid_husky","(1) Non-Critical","Duplicate external id specified: vsad3ci1","Duplicate external id specified: vsad3ci1"

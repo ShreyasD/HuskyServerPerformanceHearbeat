@@ -448,6 +448,20 @@
         <label>Minnedosa Data Center</label>
     </listViews>
     <listViews>
+        <fullName>Mission_Critical_Servers</fullName>
+        <columns>NAME</columns>
+        <columns>Data_Center__c</columns>
+        <columns>Type__c</columns>
+        <columns>Operating_System__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Criticality__c</field>
+            <operation>equals</operation>
+            <value>(5) Mission Critical</value>
+        </filters>
+        <label>Mission Critical Servers</label>
+    </listViews>
+    <listViews>
         <fullName>Prince_George</fullName>
         <columns>NAME</columns>
         <columns>Applications__c</columns>

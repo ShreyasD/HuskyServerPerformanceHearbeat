@@ -40,6 +40,8 @@ public with sharing class Husky_SCOMDashboardController {
 			criticalityStatusMap.put(f.getLabel().substringAfter(' '), 'Up');
 			performanceToStatusMap.put(f.getLabel().substringAfter(' ') + Husky_SCOMUtilities.PERFORMANCE_METRIC_CPU, Husky_SCOMUtilities.PERFORMANCE_GREEN);
 			performanceToStatusMap.put(f.getLabel().substringAfter(' ') + Husky_SCOMUtilities.PERFORMANCE_METRIC_MEMORY, Husky_SCOMUtilities.PERFORMANCE_GREEN);
+			availabilityRecordsByCriticalityMap.put(f.getLabel().substringAfter(' '), new List<SCOM_Availability__c>());
+			performanceRecordsByCriticalityMap.put(f.getLabel().substringAfter(' '), new List<PerformanceWrapper>());
 		}
 	}
 
@@ -52,15 +54,15 @@ public with sharing class Husky_SCOMDashboardController {
 		for(SCOM_Availability__c availability : availabilityList) {
 			serverNames.add(availability.Server__c);
 			if(availability.Server__r.Name == 'CGWSCOM350PD') continue;
-			if(availability.Server__r.Criticality__c <> null && availabilityRecordsByCriticalityMap.containsKey(availability.Server__r.Criticality__c.substringAfter(' ')))
-				availabilityRecordsByCriticalityMap.get(availability.Server__r.Criticality__c.substringAfter(' ')).add(availability);
-			else {
-				String key = availability.Server__r.Criticality__c == null ? 'Not Specified' : availability.Server__r.Criticality__c.substringAfter(' ');
+          
+            String key = availability.Server__r.Criticality__c == null ? 'Not Specified' : availability.Server__r.Criticality__c.substringAfter(' ');
+            if(availabilityRecordsByCriticalityMap.containsKey(key)){
+				availabilityRecordsByCriticalityMap.get(key).add(availability);
+            } else {
 				availabilityRecordsByCriticalityMap.put(key, new List<SCOM_Availability__c>{availability});
 			}
 
-			if(availability.Status__c == 'Down') criticalityStatusMap.put((availability.Server__r.Criticality__c <> null) ?
-				availability.Server__r.Criticality__c.substringAfter(' ') : 'Not Specified', availability.Status__c);
+			if(availability.Status__c == 'Down') criticalityStatusMap.put(key, availability.Status__c);
 		}
 	}
 
@@ -77,7 +79,7 @@ public with sharing class Husky_SCOMDashboardController {
 	}
 
 	private void buildPerformanceRecordsByCriticalityMap(Map<String, PerformanceWrapper> performanceMergeMap) {
-		performanceRecordsByCriticalityMap.clear();
+		//performanceRecordsByCriticalityMap.clear();
 		for (PerformanceWrapper performanceWrapper : performanceMergeMap.values()) {
 			String key = performanceWrapper.server.Criticality__c == null ? 'Not Specified' : performanceWrapper.server.Criticality__c.substringAfter(' ');
 			if (performanceWrapper.server.Criticality__c <> null && performanceRecordsByCriticalityMap.containsKey(key)) {

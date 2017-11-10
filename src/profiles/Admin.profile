@@ -289,6 +289,18 @@
         <field>SCOM_Server__c.Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>SCOM_Availability__c-SCOM Availability Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SCOM_Change_Request__c-SCOM Change Request Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SCOM_Performance__c-SCOM Performance Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SCOM_Server__c-SCOM Server Layout</layout>
+    </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>1.1.1.1</startAddress>
@@ -343,6 +355,26 @@
     </pageAccesses>
     <tabVisibilities>
         <tab>SCOM_Availability_Dashboard</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SCOM_Availability__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SCOM_Change_Request__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SCOM_Performance_Dashboard</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SCOM_Performance__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SCOM_Server__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
