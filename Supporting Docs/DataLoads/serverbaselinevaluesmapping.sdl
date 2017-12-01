@@ -1,6 +1,6 @@
 #Mapping values
-#Fri Nov 10 14:03:07 EST 2017
-server=Server__c
+#Fri Nov 10 14:42:47 EST 2017
+time=Time__c
 metric=Metric__c
 serverid=Server__r\:External_Id__c
 monitorInstance=Monitor_Instance__c
