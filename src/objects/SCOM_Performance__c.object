@@ -214,6 +214,7 @@
         <columns>External_Key__c</columns>
         <columns>Monitor_Instance__c</columns>
         <columns>Metric__c</columns>
+        <columns>Unit__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Type__c</field>

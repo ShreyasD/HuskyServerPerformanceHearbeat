@@ -402,6 +402,11 @@
         <fullName>All</fullName>
         <columns>NAME</columns>
         <columns>Host_Name__c</columns>
+        <columns>Criticality__c</columns>
+        <columns>Data_Center__c</columns>
+        <columns>Environment__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>Operating_System__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

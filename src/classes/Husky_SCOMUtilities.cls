@@ -76,7 +76,7 @@ public class Husky_SCOMUtilities {
 				Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
 				String messageBodyHtml = '<p>The following mission critical servers are reported as down: </p><br/>';
 				email.setSubject('Mission Critical Servers Down: ' + server.Name + ' (' + server.Applications__c + ')');
-				email.setToAddresses(new String[] {'shreyas.dhond@huskyenergy.com', 'amit.banerjee@huskyenergy.com'});
+				email.setToAddresses(new String[] {'shreyas.dhond@huskyenergy.com', 'amit.banerjee@huskyenergy.com', 'khaled.rafih@huskyenergy.com'});
 				messageBodyHtml += '<table>';
 				messageBodyHtml += '<tr><td><a target="SCOM_Server__c" href="https://' + System.URL.getSalesforceBaseUrl().getHost() + '/' + server.Id + '">' + server.Name + '</a>';
 				messageBodyHtml += '<tr><td>Applications:</td><td>' + server.Applications__c + '<td/></tr>';
