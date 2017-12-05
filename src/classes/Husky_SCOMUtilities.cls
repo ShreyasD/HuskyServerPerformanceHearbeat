@@ -66,6 +66,9 @@ public class Husky_SCOMUtilities {
 			}
 		}
 
+		//Get Assigned Org-wide email address
+		OrgWideEmailAddress[] csrOrgWideEmail = [select Id from OrgWideEmailAddress where DisplayName = 'Husky Server Heartbeat Email'];
+
 		//Compile email body
 		for(SCOM_Server__c server : [Select Id, Name, Type__c, Criticality__c, Short_Description__c,
 											Applications__c, Environment__c, System_Created_By__c,
@@ -76,7 +79,8 @@ public class Husky_SCOMUtilities {
 				Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
 				String messageBodyHtml = '<p>The following mission critical servers are reported as down: </p><br/>';
 				email.setSubject('Mission Critical Servers Down: ' + server.Name + ' (' + server.Applications__c + ')');
-				email.setToAddresses(new String[] {'shreyas.dhond@huskyenergy.com', 'amit.banerjee@huskyenergy.com', 'khaled.rafih@huskyenergy.com'});
+				email.setOrgWideEmailAddressId(csrOrgWideEmail.get(0).Id);
+				email.setToAddresses(new String[] {'shreyas.dhond@huskyenergy.com', 'amit.banerjee@huskyenergy.com', 'khaled.rafih@huskyenergy.com', 'Chris.Payne@huskyenergy.com', 'Bernie.Carroll@huskyenergy.com'});
 				messageBodyHtml += '<table>';
 				messageBodyHtml += '<tr><td><a target="SCOM_Server__c" href="https://' + System.URL.getSalesforceBaseUrl().getHost() + '/' + server.Id + '">' + server.Name + '</a>';
 				messageBodyHtml += '<tr><td>Applications:</td><td>' + server.Applications__c + '<td/></tr>';

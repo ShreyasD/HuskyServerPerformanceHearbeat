@@ -13,7 +13,12 @@
 	
 
 	<target name="deploy">
-		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true"/>
+		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true" testlevel="RunSpecifiedTests">
+			<runtest>Husky_SCOMDashboardControllerTest</runtest>
+			<runtest>Husky_ServiceNowAvailabilityServiceTest</runtest>
+			<runtest>Husky_ServiceNowChangeRequestServiceTest</runtest>
+			<runtest>Husky_ServiceNowPerformanceServiceTest</runtest>
+		</sf:deploy>
 	</target>
 	
 </project>
