@@ -27,31 +27,40 @@ global class Husky_ServiceNowAvailabilityService{
     List<Husky_ServiceNowApiUtils.Result> results = new List<Husky_ServiceNowApiUtils.Result>();
     Map<String, String> serverMap = new Map<String, String>();
 
-    for(APIServerAvailability availabilityRecord : records) {
-      //Get Server Info
-      //serverSet.add(availabilityRecord.Asset.subStringBefore('.'));
-      serverMap.put(availabilityRecord.Asset.subStringBefore('.'), availabilityRecord.Asset);
+    try{ 
+      for(APIServerAvailability availabilityRecord : records) {
+        //Get Server Info
+        //serverSet.add(availabilityRecord.Asset.subStringBefore('.'));
+        serverMap.put(availabilityRecord.Asset.subStringBefore('.'), availabilityRecord.Asset);
 
-      //Get Performance Info
-      SCOM_Availability__c record = new SCOM_Availability__c();
-      record.External_Key__c = availabilityRecord.Asset;
-      record.Polling_Interval__c = (availabilityRecord.PollingInterval.isNumeric()) ? 
-        Integer.valueOf(availabilityRecord.PollingInterval) : 0;
-      record.Status__c = availabilityRecord.Status;
-      record.Server__r = new SCOM_Server__c(
-        Name = availabilityRecord.Asset.subStringBefore('.')
-      );
-      availabilityRecords.add(record);
+        //Get Performance Info
+        SCOM_Availability__c record = new SCOM_Availability__c();
+        record.External_Key__c = availabilityRecord.Asset;
+        record.Polling_Interval__c = (availabilityRecord.PollingInterval != null && availabilityRecord.PollingInterval.isNumeric()) ? 
+          Integer.valueOf(availabilityRecord.PollingInterval) : 0;
+        record.Status__c = availabilityRecord.Status;
+        record.Server__r = new SCOM_Server__c(
+          Name = availabilityRecord.Asset.subStringBefore('.')
+        );
+        availabilityRecords.add(record);
+      }
+
+      //Create Server Records
+      for(String key : serverMap.keySet()) {
+        SCOM_Server__c server = new SCOM_Server__c();
+        server.Name = key;
+        server.Host_Name__c = serverMap.get(key);
+        server.External_Id__c = key;
+        serverRecords.add(server);
+      }
+    } catch (Exception ex) {
+      String statusCode = Husky_ServiceNowApiUtils.STATUS_ERROR_PARSE;
+      Husky_ServiceNowApiUtils.Result result = new Husky_ServiceNowApiUtils.Result(false, null, 
+        false, statusCode);
+      result.addError(new Husky_ServiceNowApiUtils.Error(null, 'Parsing error encountered', null));
+      results.add(result);
     }
 
-    //Create Server Records
-    for(String key : serverMap.keySet()) {
-      SCOM_Server__c server = new SCOM_Server__c();
-      server.Name = key;
-      server.Host_Name__c = serverMap.get(key);
-      server.External_Id__c = key;
-      serverRecords.add(server);
-    }
 
     return results;
   }

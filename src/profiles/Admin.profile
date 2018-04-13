@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
-        <application>SCOM_Status_Tracker</application>
+        <application>Heartbeat_Report</application>
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
         <apexClass>Husky_SCOMChangeRequestByServerCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Husky_SCOMChangeRequestByServerCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -54,11 +58,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>SCOM_Availability__c.Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>SCOM_Change_Request__c.Active__c</field>
@@ -393,6 +392,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>AllowViewKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApexRestServices</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -908,6 +911,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>SubscribeToLightningDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>SubscribeToLightningReports</name>
     </userPermissions>
     <userPermissions>
@@ -973,6 +980,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewPublicReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

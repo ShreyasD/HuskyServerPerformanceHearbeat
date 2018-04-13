@@ -32,6 +32,7 @@ global class Husky_ServiceNowChangeRequestService {
 		for(APIChangeRequest chRequestRecord : records) {
 			SCOM_Change_Request__c record = new SCOM_Change_Request__c();
 
+			record.Name = chRequestRecord.changeRequestNumber;
 			record.Active__c = getPicklistValue(chRequestRecord.active, ACTIVE_DEFAULT);
 			record.Application__c = chRequestRecord.application ;
 			record.Approval__c = getPicklistValue(chRequestRecord.approval, APPROVAL_DEFAULT);

@@ -107,7 +107,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <required>false</required>
+        <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -117,6 +117,22 @@
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Down_Servers_Last_Updated</fullName>
+        <columns>NAME</columns>
+        <columns>Server__c</columns>
+        <columns>Status__c</columns>
+        <columns>Polling_Interval__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Down</value>
+        </filters>
+        <label>Down Servers Last Updated</label>
     </listViews>
     <nameField>
         <displayFormat>SAN-{000000000}</displayFormat>

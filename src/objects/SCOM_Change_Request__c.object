@@ -384,6 +384,22 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+    <listViews>
+        <fullName>Change_Request_Pushed_By_SAP_PI</fullName>
+        <columns>NAME</columns>
+        <columns>Active__c</columns>
+        <columns>Application__c</columns>
+        <columns>Approvers__c</columns>
+        <columns>Implementation_Reviewers__c</columns>
+        <columns>Hyperlink__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <operation>equals</operation>
+            <value>hdata</value>
+        </filters>
+        <label>Change Request Pushed By SAP PI</label>
+    </listViews>
     <nameField>
         <label>Change Request Number</label>
         <trackHistory>false</trackHistory>

@@ -9,7 +9,7 @@ ant -DDEST_USERNAME=<username for target org> -DDEST_PASSWD=<password for target
 1) Load Application Configuration Data. (Apex Data Loader is required for loads)
 	> For 'Server Criticality List.csv' use ServerCriticalityMapping.sdl. Operation: upsert 
 	> For 'ServerBaselineValues.csv' use serverbaselinevaluesmapping.sdl. Operation: insert
-	> For 'datacenter.csv' use datacentermapping.sdl. Operation: upsert
+	> For 'datacenter.csv' use datacentermapping.sdl. Operation: upser'.t
 	> For 'changerequest.csv' use changerequestmapping.sdl. Operation: insert
 
-2) Setup Organization Wide Email Address with name 'Husky Server Heartbeat Email' and email 'list-sappi@huskyenergy.com'.
+2) Setup Organization Wide Email Address with name 'Husky Server Heartbeat Email' and email 'list-sappi@huskyenergy.com

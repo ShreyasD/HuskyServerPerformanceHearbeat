@@ -20,11 +20,12 @@ private class Husky_SCOMDashboardControllerTest {
 			System.assertEquals(Husky_SCOMUtilities.PERFORMANCE_ORANGE, ctrl.getOrange());
 			System.assertEquals(Husky_SCOMUtilities.PERFORMANCE_RED, ctrl.getRed());
 
-			for (List<Husky_SCOMDashboardController.PerformanceWrapper> perfWrappers : ctrl.performanceRecordsByCriticalityMap.values())
+			for (List<Husky_SCOMDashboardController.PerformanceWrapper> perfWrappers : ctrl.performanceRecordsByCriticalityMap.values()) {
 				for(Husky_SCOMDashboardController.PerformanceWrapper perfWrapper : perfWrappers) {
 					checkMemValue(perfWrapper);
 					checkCPUValue(perfWrapper);
 				}
+			}
 		}
 	}
 
@@ -43,6 +44,7 @@ private class Husky_SCOMDashboardControllerTest {
 	@testSetup
 	static void prepareData() {
 		List<SCOM_Server__c> servers = Husky_SCOM_TestData.createServers(9);
+		List<SCOM_Availability__c> availabilities = Husky_SCOM_TestData.createAvailabilitiesForServers(servers);
 		List<SCOM_Performance__c> performances = Husky_SCOM_TestData.createPerformanceForServers(servers);
 		List<SCOM_Change_Request__c> chRequests = Husky_SCOM_TestData.createChangeRequests(30);
 	}

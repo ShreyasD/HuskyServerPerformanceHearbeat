@@ -10,7 +10,9 @@
 	  </classpath>
 	</taskdef>
 
-	
+	<target name="deployWithoutTest">
+		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true"/>
+	</target>
 
 	<target name="deploy">
 		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true" testlevel="RunSpecifiedTests">
@@ -18,6 +20,7 @@
 			<runtest>Husky_ServiceNowAvailabilityServiceTest</runtest>
 			<runtest>Husky_ServiceNowChangeRequestServiceTest</runtest>
 			<runtest>Husky_ServiceNowPerformanceServiceTest</runtest>
+			<runtest>Husky_SCOMChangeRequestByServerCtrlTest</runtest>
 		</sf:deploy>
 	</target>
 	

@@ -223,6 +223,27 @@
         </filters>
         <label>Baseline Performance Values</label>
     </listViews>
+    <listViews>
+        <fullName>Last_Updated</fullName>
+        <columns>NAME</columns>
+        <columns>Current_Metric_Value__c</columns>
+        <columns>Monitor_Instance__c</columns>
+        <columns>Server__c</columns>
+        <columns>Unit__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <operation>equals</operation>
+            <value>hdata</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Last Updated</label>
+    </listViews>
     <nameField>
         <displayFormat>SPN-{000000000}</displayFormat>
         <label>SCOM Performance Number</label>

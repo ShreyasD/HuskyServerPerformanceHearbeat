@@ -21,9 +21,10 @@ public with sharing class Husky_SCOMChangeRequestByServerCtrl {
                     applications = server.Applications__c.split(',');
                     changeRequestList = [Select Id, Name, Active__c, Application__c, Approval__c, Approvers__c,
                                                 Hyperlink__c, Priority__c, State__c, Urgency__c, Short_Description__c,
-                                                Opened_By__c, Opened_At__c
+                                                Opened_By__c, Opened_At__c, End_Date__c
                                          From SCOM_Change_Request__c
-                                         Where Application__c In :applications];
+                                         Where Application__c In :applications
+                                         Order By End_Date__c DESC NULLS FIRST];
                 }
                 return changeRequestList;
             } catch (QueryException ex) {

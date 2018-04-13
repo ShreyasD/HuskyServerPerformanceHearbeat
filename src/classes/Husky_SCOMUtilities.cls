@@ -23,9 +23,8 @@ public class Husky_SCOMUtilities {
 														+ ', External_Key__c, Metric__c, Type__c, Unit__c, Server__c, Server__r.Id'
 														+ ', Server__r.Criticality__c, Server__r.Applications__c, Server__r.Name'
 														+ ' FROM SCOM_Performance__c'
-														+ ' WHERE Metric__c != \'' + PERFORMANCE_METRIC_FREESPACE + '\''
-														+ ' AND Metric__c != \'' + PERFORMANCE_METRIC_TOTALSPACE + '\''
-														+ ' AND Metric__c != \'' + PERFORMANCE_METRIC_USEDSPACE + '\''
+														+ ' WHERE (Metric__c = \'' + PERFORMANCE_METRIC_CPU + '\''
+														+ ' OR Metric__c = \'' + PERFORMANCE_METRIC_MEMORY + '\')'
 														+ ' ORDER BY Type__c ASC';
 
 
@@ -33,19 +32,6 @@ public class Husky_SCOMUtilities {
 	Trigger constants
 	****************/
 	public static Boolean executeTriggerCode = true;
-
-
-	public static void TriggerBeforeInsertSCOMChangeRequest(List<SCOM_Change_Request__c> changeRequestList) {
-		updateServerOnChangeRequest(changeRequestList);
-	}
-
-	public static void TriggerBeforeUpdateSCOMChangeRequest(List<SCOM_Change_Request__c> changeRequestList) {
-		updateServerOnChangeRequest(changeRequestList);
-	}
-
-	public static void updateServerOnChangeRequest(List<SCOM_Change_Request__c> changeRequestList) {
-
-	}
 
 	public static void TriggerAfterInsertSCOMAvailability(List<SCOM_Availability__c> availabilityList) {
 		sendNotificationOnMissionCriticalDown(availabilityList, null);
@@ -67,7 +53,15 @@ public class Husky_SCOMUtilities {
 		}
 
 		//Get Assigned Org-wide email address
-		OrgWideEmailAddress[] csrOrgWideEmail = [select Id from OrgWideEmailAddress where DisplayName = 'Husky Server Heartbeat Email'];
+		OrgWideEmailAddress[] csrOrgWideEmail;
+		if(!Test.isRunningTest()) {
+			csrOrgWideEmail = [select Id from OrgWideEmailAddress where DisplayName = 'Husky Server Heartbeat Email'];
+		} else {
+			csrOrgWideEmail = new List<OrgWideEmailAddress>{new OrgWideEmailAddress()};
+			csrOrgWideEmail[0].DisplayName = 'Husky Server Heartbeat Email';
+			csrOrgWideEmail[0].Address = 'list-sappi@huskyenergy.com';
+			csrOrgWideEmail[0].IsAllowAllProfiles = true;
+		}
 
 		//Compile email body
 		for(SCOM_Server__c server : [Select Id, Name, Type__c, Criticality__c, Short_Description__c,

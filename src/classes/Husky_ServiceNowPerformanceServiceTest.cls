@@ -37,6 +37,4 @@ private class Husky_ServiceNowPerformanceServiceTest {
 		Husky_ServiceNowPerformanceService.pushRecords(performances);
 		System.assertEquals(num*2, [SELECT Count() FROM SCOM_Performance__c]);
 	}
-
-
 }

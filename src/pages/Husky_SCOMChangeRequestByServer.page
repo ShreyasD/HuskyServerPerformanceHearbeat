@@ -77,6 +77,8 @@
                   <div class="slds-text-heading--small">{!changeRequest.Priority__c}</div>
                   <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Opened_At__c.label}</div>
                   <div class="slds-text-heading--small">{!changeRequest.Opened_At__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.End_Date__c.label}</div>
+                  <div class="slds-text-heading--small">{!changeRequest.End_Date__c}</div>
                   <div class="slds-form-element__label">{!$ObjectType.SCOM_Change_Request__c.fields.Short_Description__c.label}</div>
                   <div class="slds-text-heading--small">{!changeRequest.Short_Description__c}</div>
                 </div>

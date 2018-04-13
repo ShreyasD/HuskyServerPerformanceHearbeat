@@ -105,6 +105,23 @@ public class Husky_SCOM_TestData {
 										Unit__c = unit);
 	}
 
+	public static List<SCOM_Availability__c> createAvailabilitiesForServers(List<SCOM_Server__c> servers) {
+		List<SCOM_Availability__c> availabilities = new List<SCOM_Availability__c>();
+		for (SCOM_Server__c server : servers) {
+			availabilities.add(generateAvailabilityForServer(server, 100, 'Up'));
+		}
+		insert availabilities;
+		return availabilities;
+	}
+
+	public static SCOM_Availability__c generateAvailabilityForServer(SCOM_Server__c server, Integer pollingInterval, String status) {
+		return new SCOM_Availability__c(Server__c = server.Id,
+										External_Key__c = server.Name + '.huskyenergy.com',
+										Polling_Interval__c = pollingInterval,
+										Status__c = status
+										);
+	}
+
 	public static List<SCOM_Change_Request__c> createChangeRequests(Integer numOfChRequests) {
 		List<SCOM_Change_Request__c> changeRequests = new List<SCOM_Change_Request__c>();
 		List<Schema.PicklistEntry> approvals = SCOM_Change_Request__c.Approval__c.getDescribe().getPicklistValues();

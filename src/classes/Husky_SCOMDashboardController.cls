@@ -76,6 +76,7 @@ public with sharing class Husky_SCOMDashboardController {
 			else performanceMergeMap.put(key, new PerformanceWrapper(performanceRecord));
 		}
 		buildPerformanceRecordsByCriticalityMap(performanceMergeMap);
+		sortPerformanceLists();
 	}
 
 	private void buildPerformanceRecordsByCriticalityMap(Map<String, PerformanceWrapper> performanceMergeMap) {
@@ -93,6 +94,12 @@ public with sharing class Husky_SCOMDashboardController {
 		}
 	}
 
+	private void sortPerformanceLists() {
+		for(String criticality : criticalityCategories) {
+			performanceRecordsByCriticalityMap.get(criticality).sort();
+		}
+	}
+
 	private void setPerformanceCriticalityStatus(String key, PerformanceWrapper performanceWrapper) {
 		String cpuKey = key + Husky_SCOMUtilities.PERFORMANCE_METRIC_CPU;
 		String memKey = key + Husky_SCOMUtilities.PERFORMANCE_METRIC_MEMORY;
@@ -106,37 +113,6 @@ public with sharing class Husky_SCOMDashboardController {
 			performanceToStatusMap.put(memKey, Husky_SCOMUtilities.PERFORMANCE_ORANGE);
 		else if (performanceWrapper.getMemPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_RED)
 			performanceToStatusMap.put(memKey, Husky_SCOMUtilities.PERFORMANCE_RED);
-	}
-
-	private void getChangeRequestToServerMap() {
-		List<SCOM_Change_Request__c> changeRequestList = [Select Id, Name, Active__c, Application__c, Approval__c, Approvers__c,
-																 Hyperlink__c, Priority__c, State__c, Urgency__c
-														  From SCOM_Change_Request__c];
-		List<SCOM_Server__c> serverList = [Select Id, Name, Applications__c
-										   From SCOM_Server__c
-										   Where Name In :serverNames];
-
-		//Map change requests by application
-		Map<String, List<SCOM_Change_Request__c>> changeRequestMapByApplication =
-			new Map<String, List<SCOM_Change_Request__c>>();
-		for(SCOM_Change_Request__c cr : changeRequestList) {
-			if(changeRequestMapByApplication.containsKey(cr.Application__c))
-				changeRequestMapByApplication.get(cr.Application__c).add(cr);
-			else changeRequestMapByApplication.put(cr.Application__c, new List<SCOM_Change_Request__c>{cr});
-		}
-
-		for(SCOM_Server__c server : serverList) {
-			for(String application : changeRequestMapByApplication.keySet()) {
-				if(server.Applications__c.contains(application)) {
-					if(serverToChangeRequestMap.containsKey(server.Name))
-						serverToChangeRequestMap.get(server.Name).addAll(changeRequestMapByApplication.get(application));
-					else {
-						serverToChangeRequestMap.put(server.Name, new List<SCOM_Change_Request__c>());
-						serverToChangeRequestMap.get(server.Name).addAll(changeRequestMapByApplication.get(application));
-					}
-				}
-			}
-		}
 	}
 
 	public String getPerformanceMetricCPU() {
@@ -159,7 +135,7 @@ public with sharing class Husky_SCOMDashboardController {
 		return Husky_SCOMUtilities.PERFORMANCE_RED;
 	}
 
-	public class PerformanceWrapper{
+	public class PerformanceWrapper implements Comparable {
 
 		public SCOM_Server__c server {get; private set;}
 		public Double cpuAvg 		{get; private set;}
@@ -215,6 +191,21 @@ public with sharing class Husky_SCOMDashboardController {
 				return Husky_SCOMUtilities.PERFORMANCE_RED;
 			}
 			return null;
+		}
+
+		// Implement the compareTo() method
+		public Integer compareTo(Object compareTo) {
+			PerformanceWrapper wrapperCompareTo = (PerformanceWrapper) compareTo;
+			if (getCPUPerformanceStatus() == wrapperCompareTo.getCPUPerformanceStatus()) {
+				if(getMemPerformanceStatus() == wrapperCompareTo.getMemPerformanceStatus()) return 0;
+				if(getMemPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_RED && getMemPerformanceStatus() != wrapperCompareTo.getMemPerformanceStatus()) return -1;
+				if(getMemPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_ORANGE && wrapperCompareTo.getMemPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_GREEN) return -1;
+				return 1;
+			} 
+			
+			if (getCPUPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_RED && getCPUPerformanceStatus() != wrapperCompareTo.getCPUPerformanceStatus()) return -1;
+			if(getCPUPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_ORANGE && wrapperCompareTo.getCPUPerformanceStatus() == Husky_SCOMUtilities.PERFORMANCE_GREEN) return -1;
+			return 1;
 		}
 
 	}
