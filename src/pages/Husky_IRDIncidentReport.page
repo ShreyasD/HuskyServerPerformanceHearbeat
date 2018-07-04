@@ -1,0 +1,281 @@
+<apex:page showHeader="true" sidebar="true" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0" controller="Husky_IRDIncidentReportController">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Incident Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        <apex:includeScript value="https://code.jquery.com/jquery-3.1.1.min.js"/>
+    </head>
+
+    <!-- Custom Page Style -->
+    <style type="text/css">
+    </style>
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript">
+        var j$ = jQuery.noConflict();
+
+        j$(document).ready(function(){
+          var openSections = JSON.parse(sessionStorage.getItem("Husky_IRDIncidentReport_openSections"));
+          j$(".categoryButton").each(function(){
+          //   if(!openSections.includes(this.id))
+              toggleServerList(this);
+          })
+        });
+
+        j$(window).on('beforeunload', function(){
+          storePageStatus();
+        });
+
+        function onCollapsibleClick(target) {
+          toggleServerList(target);
+        }
+
+        function toggleServerList(target) {
+          var incidentList = j$(target).parent().parent().children(".incidentList");
+          
+          //toggle
+          incidentList.toggle();
+
+          //Change Icon
+          if(incidentList.is(':visible')) {
+            j$(target).children("#chevronRight").hide();
+            j$(target).children("#chevronDown").show();
+          } else {
+            j$(target).children("#chevronDown").hide();
+            j$(target).children("#chevronRight").show();
+          }
+        }
+
+        function storePageStatus() {
+          var openSections = [];
+          j$(".categoryButton").each(function(){
+            var incidentList = j$(this).parent().parent().children(".incidentList");
+            if(incidentList.is(':visible')) {
+              console.log(this.id + ' section is open!');
+              openSections.push(this.id);
+            }
+          })
+
+          //Add to sessionstorage
+          console.log(openSections);
+          sessionStorage.setItem("Husky_IRDIncidentReport_openSections", JSON.stringify(openSections));
+        }
+    </script>
+    
+    <body>
+    <!-- REQUIRED SLDS WRAPPER -->
+    <div class="huskyenergy" role="banner">
+        <!-- MASTHEAD -->
+        <h1 class="slds-text-heading--large slds-m-bottom--large">
+            Incident Dashboard
+        </h1>
+        <apex:form >
+            <div class="slds-grid">
+              <div class="slds-col">
+                <div class="slds-button-group" role="group">
+                  <apex:repeat value="{!yearSelections}" var="year">
+      	            <apex:commandLink styleClass="slds-button {!IF(yearSelected == year, 'slds-button--destructive', 'slds-button--neutral')}" action="{!setDateRange}" value="{!year}" status="ajaxStatus">
+      	                <apex:param name="yearSelected" value="{!year}"/>
+      	            </apex:commandLink>
+              	  </apex:repeat>
+                </div>
+              </div>
+              <div class="slds-col">
+                <apex:commandButton styleClass="slds-button slds-button--neutral" action="{!exportData}" value="Export Data for Year" status="ajaxStatus"/>
+              </div>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+              <div class="slds-col"/>
+            </div>
+            
+            <!-- SPINNER -->
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                    <div class="slds-spinner_container" style="position: fixed;" >
+                        <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </apex:facet>
+            </apex:actionStatus>
+            <!-- / SPINNER -->
+        </apex:form>
+        <apex:outputPanel layout="none" id="reportTable">
+        <apex:repeat value="{!assignmentGroups}" var="assgnGroup">
+            <div class="slds-section slds-is-open">
+              <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action categoryButton" onclick="onCollapsibleClick(this);" id="{!assgnGroup}Section">
+                  <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" id="chevronRight">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/utility-sprite/svg/symbols.svg#chevronright')}"></use>
+                  </svg>
+                  <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" id="chevronDown">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/utility-sprite/svg/symbols.svg#chevrondown')}"></use>
+                  </svg>
+                  <span class="slds-truncate">
+                    {!assgnGroup}
+                  </span>
+                </button>
+              </h3>
+              <div aria-hidden="false" class="slds-section__content incidentList slds-scrollable" id="expando-unique-id">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                  <thead>
+                    <tr class="slds-text-title_caps">
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Month">
+                            <h5 class="font-size-heading-x-small">Month</h5>
+                        </div>
+                      </th>
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Opening Balance">
+                            <h5 class="font-size-heading-x-small">Opening Backlog</h5>
+                        </div>
+                      </th>
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Created">
+                            <h5 class="font-size-heading-x-small">Created</h5>
+                        </div>
+                      </th>
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Avg Response Time (hrs)">
+                            <h5 class="font-size-heading-x-small">Avg Response Time (hrs)</h5>
+                        </div>
+                      </th>
+                      <!-- <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Avg Response Time (hrs)">
+                            <h5 class="font-size-heading-x-small">Avg SLA Response Time (hrs)</h5>
+                        </div>
+                      </th> -->
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Resolved">
+                            <h5 class="font-size-heading-x-small">Resolved</h5>
+                        </div>
+                      </th>
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Avg Resolution Time (hrs)">
+                            <h5 class="font-size-heading-x-small">Avg Resolution Time (hrs)</h5>
+                        </div>
+                      </th>
+                      <!-- <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Avg Resolution Time (hrs)">
+                            <h5 class="font-size-heading-x-small">Avg SLA Resolution Time (hrs)</h5>
+                        </div>
+                      </th> -->
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Opening Backlog">
+                            <h5 class="font-size-heading-x-small">Closing Backlog</h5>
+                        </div>
+                      </th>
+                      <th scope="col" class="slds-cell-wrap">
+                        <div class="slds-truncate" title="Opening Backlog">
+                            <h5 class="font-size-heading-x-small">Avg Age of Backlog</h5>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  	<apex:variable var="index" value="{!1}"/>
+                    <apex:repeat value="{!months}" var="month">
+                        <apex:variable var="key" value="{!assgnGroup+'-'+month}"/>
+                        <apex:outputPanel layout="none" id="dataGroupingRow" rendered="{!index <= maxMonthOfYear}">
+	                        <tr>
+	                          <th scope="row" class="slds-cell-wrap" data-label="Month">
+	                            <div class="slds-truncate" title="{!month} {!yearSelected}">{!month} {!yearSelected}</div>
+	                          </th>
+	                          <td scope="row" class="slds-cell-wrap" data-label="Opening Balance">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].OpeningBalanceIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{!dataGroupingMonthMap[key].OpeningBalanceSize}"/>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <td scope="row" class="slds-cell-wrap" data-label="Created">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].CreatedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{!dataGroupingMonthMap[key].CreatedSize}"/>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Response Time (hrs)">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].CreatedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <!-- <apex:outputText value="{!dataGroupingMonthMap[key].AvgResponseTime}"/> -->
+	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgResponseTime}" />
+	                                	</apex:outputText>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <!-- <td scope="row" class="slds-cell-wrap" data-label="Avg SLA Response Time (hrs)">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].CreatedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgSLAResponseTime}" />
+	                                	</apex:outputText>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td> -->
+	                          <td scope="row" class="slds-cell-wrap" data-label="Resolved">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].ResolvedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{!dataGroupingMonthMap[key].ResolvedSize}"/>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Resolution Time (hrs)">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].ResolvedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <!-- <apex:outputText value="{!dataGroupingMonthMap[key].AvgResolutionTime}"/> -->
+	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgResolutionTime}" />
+	                                	</apex:outputText>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <!-- <td scope="row" class="slds-cell-wrap" data-label="Avg SLA Resolution Time (hrs)">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].ResolvedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgSLAResolutionTime}" />
+	                                	</apex:outputText>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td> -->
+	                          <td scope="row" class="slds-cell-wrap" data-label="Closing Backlog">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].OpeningBacklogIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                    <apex:outputText value="{!dataGroupingMonthMap[key].OpeningBacklogSize}"/>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Age of Backlog">
+	                            <div class="slds-truncate">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].OpeningBacklogIdSet}&retURL=/Husky_IRDIncidentReport" rendered="{!yearSelected == TEXT(YEAR(TODAY())) && index == MONTH(TODAY())}">
+	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgAgeOfBacklogInDays}" />
+	                                	</apex:outputText>
+	                                </apex:outputLink>
+	                            </div>
+	                          </td>
+	                        </tr>
+	                    </apex:outputPanel>
+	                    <apex:variable var="index" value="{!index+1}"/>
+                    </apex:repeat>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </apex:repeat>
+        </apex:outputPanel>
+    </div>
+    </body>
+</apex:page>

@@ -1,0 +1,103 @@
+<apex:page controller="Husky_IRDIncidentReportController" contentType="txt/xml#{!reportName}.xls" cache="true" action="{!getDataForReport}">
+	<apex:outputText value="{!xlsHeader}"/>
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+    xmlns:o="urn:schemas-microsoft-com:office:office"
+    xmlns:x="urn:schemas-microsoft-com:office:excel"
+    xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+    xmlns:html="http://www.w3.org/TR/REC-html40">
+    	<Styles>
+	    	<Style ss:ID="header">
+	   			<Alignment/>
+			    <Borders/>
+			    <Font ss:Bold="1"/>
+			    <Interior/>
+			    <NumberFormat/>
+			    <Protection/>
+	     	</Style>
+	    </Styles>
+	    <apex:repeat value="{!assignmentGroups}" var="assgnGroup"> 
+			<Worksheet ss:Name="{!assgnGroup}">
+				<Table x:FullColumns="1" x:FullRows="1">
+		  			<Column ss:Width="170"/>
+		  			<Row>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Month</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Opening Backlog</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Created</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Avg Response Time (hrs)</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Resolved</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Avg Resolution Time (hrs)</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Closing Backlog</Data></Cell>
+		 				<Cell ss:StyleID="header"><Data ss:Type="String" >Avg Age of Backlog</Data></Cell>
+		 			</Row>
+		 			<apex:variable var="index" value="{!1}"/>
+                    <apex:repeat value="{!months}" var="month">
+                        <apex:variable var="key" value="{!assgnGroup+'-'+month}"/>
+                        <apex:outputPanel layout="none" id="dataGroupingRow" rendered="{!index <= maxMonthOfYear}">
+	                        <Row>
+		                        <Cell>
+		                        	<Data ss:Type="String" >
+		                        		{!month} {!yearSelected}
+		                        	</Data>
+		                        </Cell>
+				 				<Cell>
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{!dataGroupingMonthMap[key].OpeningBalanceSize}" />
+				 					</Data>
+				 				</Cell>
+				 				<Cell>
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{!dataGroupingMonthMap[key].CreatedSize}"/>
+				 					</Data>
+				 				</Cell>
+				 				<Cell>
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{0, number, ###,##0.00}">
+	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgResponseTime}" />
+			                            </apex:outputText>
+			                        </Data>
+			                    </Cell>
+				 				<Cell>
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{!dataGroupingMonthMap[key].ResolvedSize}"/>
+				 					</Data>
+				 				</Cell>
+				 				<Cell >
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{0, number, ###,##0.00}">
+		                                	<apex:param value="{!dataGroupingMonthMap[key].AvgResolutionTime}" />
+		                            	</apex:outputText>
+				 					</Data>
+				 				</Cell>
+				 				<Cell >
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{!dataGroupingMonthMap[key].OpeningBacklogSize}"/>
+				 					</Data>
+				 				</Cell>
+				 				<Cell >
+				 					<Data ss:Type="String" >
+				 						<apex:outputText value="{0, number, ###,##0.00}" rendered="{!yearSelected == TEXT(YEAR(TODAY())) && index == MONTH(TODAY())}">
+		                                	<apex:param value="{!dataGroupingMonthMap[key].AvgAgeOfBacklogInDays}" />
+		                            	</apex:outputText>
+				 					</Data>
+				 				</Cell>
+				 			</Row>
+				 		</apex:outputPanel>
+				 		<apex:variable var="index" value="{!index+1}"/>
+                    </apex:repeat>
+	 			</Table>
+			</Worksheet>
+		</apex:repeat>
+		<!-- <Worksheet ss:Name="Contacts">
+  			<Table x:FullColumns="1" x:FullRows="1">
+				<Column ss:Width="170"/>
+				<Column ss:Width="280"/>
+				<Column ss:Width="330"/>
+				<Row>
+					<Cell ss:StyleID="s1"><Data ss:Type="String" >Contact Name</Data></Cell>
+					<Cell ss:StyleID="s1"><Data ss:Type="String" >Email</Data></Cell>
+					<Cell ss:StyleID="s1"><Data ss:Type="String" >Account Name</Data></Cell>
+				</Row>
+			</Table>
+ 		</Worksheet> -->
+	</Workbook>
+</apex:page>

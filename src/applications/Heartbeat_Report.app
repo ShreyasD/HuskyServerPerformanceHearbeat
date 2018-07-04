@@ -8,4 +8,6 @@
     <tab>SCOM_Change_Request__c</tab>
     <tab>SCOM_Availability_Dashboard</tab>
     <tab>SCOM_Performance_Dashboard</tab>
+    <tab>Application_Status</tab>
+    <tab>SCOM_Application_Status__c</tab>
 </CustomApplication>

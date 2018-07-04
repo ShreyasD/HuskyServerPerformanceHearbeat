@@ -1,0 +1,78 @@
+<apex:page showHeader="true" standardStylesheets="false" sidebar="true" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0" controller="Husky_IRDIncidentListCtrl">
+
+<head>
+  <title>Incidents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+  <apex:includeScript value="https://code.jquery.com/jquery-3.1.1.min.js"/>
+</head>    
+
+<body> 
+
+  <apex:form >
+    <!-- REQUIRED SLDS WRAPPER -->
+    <div class="huskyenergy" role="banner">    
+      <apex:outputPanel id="invalidServerId" rendered="{!incidentList == null || incidentList.size == 0}">
+        <h1 class="slds-text-heading--label slds-m-bottom--large">
+          No incidents to show!
+        </h1>
+      </apex:outputPanel>
+      <apex:outputPanel id="incidentPanel" 
+        rendered="{!incidentList <> null && incidentList.size > 0}">
+        <!-- MASTHEAD -->
+        <h1 class="slds-text-heading--large slds-m-bottom--large">
+          Incidents
+        </h1>
+        <!-- / MASTHEAD -->    
+
+        <apex:repeat value="{!incidentList}" var="incident">
+          <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS213, '/assets/icons/standard-sprite/svg/symbols.svg#custom')}"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="slds-media__body">
+                  <h2>
+                    <apex:outputLink value="{!IF(ISNULL(incident.Hyper_Link__c),'/'+incident.Id,incident.Hyper_Link__c)}">{!incident.Name}</apex:outputLink>
+                  </h2>
+                </div>
+              </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+              <div class="slds-grid slds-p-horizontal--medium">
+                <div class="slds-col slds-size--1-of-1">
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Assignment_Group__c.label}</div>
+                  <div class="slds-text-heading--small"><apex:outputLink value="/{!incident.Id}">{!incident.Assignment_Group__c}</apex:outputLink></div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Opened_by__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Opened_by__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.State__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.State__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Resolved_By__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Resolved_By__c}</div>
+                </div>
+                <div class="slds-col slds-size--1-of-1">
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Priority__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Priority__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Opened__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Opened__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Category__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Category__c}</div>
+                  <div class="slds-form-element__label">{!$ObjectType.IRD_Incident__c.fields.Resolved_Date__c.label}</div>
+                  <div class="slds-text-heading--small">{!incident.Resolved_Date__c}</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </apex:repeat>   
+      </apex:outputPanel>
+    </div>
+    <!-- / REQUIRED SLDS WRAPPER -->    
+  </apex:form>
+</body>
+</apex:page>

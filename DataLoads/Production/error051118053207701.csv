@@ -1,0 +1,19 @@
+"WELL_LOCATION","SINGLE_WELL_BATTERY","GAS_OIL_RATIO","TRUCKED_OIL","MTD_DATE","ERROR"
+"111100304922W302","Y","0.099","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111141104922W302","Y","0.0023","1.92181818181818181818181818181818181818","09-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"131101505223W302","Y","0.0023","3.45090909090909090909090909090909090909","09-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100151304701W402","Y","0.008","0","10-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111011405222W303","Y","0.0023","0","10-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"191131905025W302","Y","0.0023","0","09-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121090904924W302","Y","0.16154","0","10-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111110704525W302","Y","0.28688","2.67","10-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111061005022W302","Y","0.0023","3.28090909090909090909090909090909090909","09-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "

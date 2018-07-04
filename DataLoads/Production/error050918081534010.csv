@@ -1,0 +1,17 @@
+"WELL_LOCATION","GAS_OIL_RATIO","SUM(DBT.TICKET_SHIPMENT_OIL)","MAX(DBT.PRODUCTION_DATE)","ERROR"
+"100151304701W402","0.008","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111011405222W303","0.0023","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111061005022W302","0.0023","17.83","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111110704525W302","0.28688","29.37","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111141104922W302","0.0023","21.14","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121090904924W302","0.16154","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"131101505223W302","0.0023","37.96","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"191131905025W302","0.0023","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "

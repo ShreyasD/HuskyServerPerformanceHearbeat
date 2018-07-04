@@ -1,0 +1,621 @@
+"WELL_LOCATION","GAS_OIL_RATIO","SUM(WBT.PRORATED_OIL)","MAX(WBT.PRODUCTION_DATE)","ERROR"
+"100010100101W300","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100010504604W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100021704902W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100030504606W400","0.013","2.53","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100030504606w400
+Error fields: PVR_UWI_RAW__c "
+"100030504606W400","0.2581","2.53","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100030504606w400
+Error fields: PVR_UWI_RAW__c "
+"100040804910W403","0","0","05-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100042104906W402","0.16357","7.58","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100042205405W400","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100052007319W400","0","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100052007319w400
+Error fields: PVR_UWI_RAW__c "
+"100052007319W400","0.1023","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100052007319w400
+Error fields: PVR_UWI_RAW__c "
+"100052205405W400","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100053507725W400","0","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100053507725w400
+Error fields: PVR_UWI_RAW__c "
+"100053507725W400","0.6116","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100053507725w400
+Error fields: PVR_UWI_RAW__c "
+"100053607320W400","0","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100053607320w400
+Error fields: PVR_UWI_RAW__c "
+"100053607320W400","0.00389","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100053607320w400
+Error fields: PVR_UWI_RAW__c "
+"100060107825W400","0.0023","4.75","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100060107825w400
+Error fields: PVR_UWI_RAW__c "
+"100060107825W400","0.0397","4.75","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100060107825w400
+Error fields: PVR_UWI_RAW__c "
+"100061307825W400","0.06213","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100061307825w400
+Error fields: PVR_UWI_RAW__c "
+"100061307825W400","1.46282","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100061307825w400
+Error fields: PVR_UWI_RAW__c "
+"100063004805W400","0.008","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100072205405W400","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100072304801W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100072404907W403","0","0","01-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100080307825W400","0.0023","5.09","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100080307825w400
+Error fields: PVR_UWI_RAW__c "
+"100080307825W400","0.04197","5.09","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100080307825w400
+Error fields: PVR_UWI_RAW__c "
+"100081104808W400","0.008","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100090304904W403","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100090705307W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100102806404W400","0.04982","294.2","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100110107825W400","0","3.15","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100110107825w400
+Error fields: PVR_UWI_RAW__c "
+"100110107825W400","0.25235","3.15","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100110107825w400
+Error fields: PVR_UWI_RAW__c "
+"100111404902W404","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100122906404W400","0.04982","143.59","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100141307825W400","0","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100141307825w400
+Error fields: PVR_UWI_RAW__c "
+"100141307825W400","0.21308","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100141307825w400
+Error fields: PVR_UWI_RAW__c "
+"100141407825W400","0.0091","11.66","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100141407825w400
+Error fields: PVR_UWI_RAW__c "
+"100141407825W400","0.11987","11.66","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100141407825w400
+Error fields: PVR_UWI_RAW__c "
+"100142404604W400","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100143605206W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100150107825W400","0.014","49.95","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100150107825w400
+Error fields: PVR_UWI_RAW__c "
+"100150107825W400","0.05965","49.95","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100150107825w400
+Error fields: PVR_UWI_RAW__c "
+"100150307825W499","0.0319","67.52","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100151907319W400","0","37.71","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100151907319w400
+Error fields: PVR_UWI_RAW__c "
+"100151907319W400","0.07616","37.71","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100151907319w400
+Error fields: PVR_UWI_RAW__c "
+"100152004501W400","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100152407825W400","0.01162","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100152407825w400
+Error fields: PVR_UWI_RAW__c "
+"100152407825W400","0.03822","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100152407825w400
+Error fields: PVR_UWI_RAW__c "
+"100161107825W400","0.28438","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100161107825w400
+Error fields: PVR_UWI_RAW__c "
+"100161107825W400","0.29279","0","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 100161107825w400
+Error fields: PVR_UWI_RAW__c "
+"100161405206W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100161706404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"100162007320W400","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"101011304924W300","0.04181","403.22","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"101070105125W302","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"101131105120W300","0.07503","4.83","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 101131105120w300
+Error fields: PVR_UWI_RAW__c "
+"101131105120W300","0.223","4.83","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 101131105120w300
+Error fields: PVR_UWI_RAW__c "
+"102042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102043206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102061105207W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102062205405W400","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102102205405W400","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102102806404W400","0.04982","361.88","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102131606404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102161706404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"102162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103043206404W400","0.04982","187.16","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103053206404W400","0.04982","150.62","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103060604923W300","0.04181","193.64","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103070604923W300","0.01933","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103073405324W300","0","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103102806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103133206404W400","0.04982","255.47","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103152806404W400","0.04982","522.07","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103161706404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"103162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104022806404W400","0.04982","371.1","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104043206404W400","0.04982","160.52","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104052906404W400","0.04982","309.16","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104053206404W400","0.04982","59.34","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104072806404W400","0.04982","415.71","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104073206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104102806404W400","0.04982","393.56","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104122906404W400","0.04982","134.77","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104152806404W402","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104153206404W400","0.04982","199.24","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104162906404W400","0.04982","314.13","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"104163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105022806404W400","0.04982","770.59","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105043206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105052906404W400","0.04982","410.46","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105053206404W400","0.04982","264.2","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105073206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105102806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105131606404W400","0.04982","260.72","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105152806404W400","0.04982","342.44","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105153206404W400","0.04982","337.29","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105161706404W400","0.04982","211.1","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"105162906404W400","0.04982","236.54","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106022806404W400","0.04982","852.1","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106043206404W400","0.04982","218.1","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106102806404W400","0.04982","370.82","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106132906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106152806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106153206404W400","0.04982","121.06","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106161706404W400","0.04982","279.21","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"106163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107022806404W400","0.04982","493.37","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107043206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107102806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107122906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107123206404W400","0.04982","214.44","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107132906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107133206404W400","0.04982","117.96","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107152806404W400","0.04982","418.26","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107153206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107161706404W400","0.04982","265.95","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107162906404W400","0.04982","238.5","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"107163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108022806404W400","0.04982","788.72","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108043206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108052906404W400","0.04982","288.18","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108070604923W300","0.01933","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108102806404W402","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108112906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108122906404W400","0.04982","36.87","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108123206404W400","0.04982","128.76","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108132906404W400","0.04982","1.29","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108133206404W400","0.04982","34.66","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108152806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108153206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"108162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109052906404W400","0.04982","312.3","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109070604923W300","0.01933","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109123206404W400","0.04982","110.19","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109132906404W400","0.04982","30.8","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109133206404W400","0.04982","83.04","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109162906404W400","0.04982","145.1","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"109163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110042906404W400","0.04982","306.86","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110043206404W400","0.04982","187.14","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110070604923W300","0.01933","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110123206404W400","0.04982","132.45","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"110162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111011505120W300","0","9.77","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111011505120w300
+Error fields: PVR_UWI_RAW__c "
+"111011505120W300","0.549","9.77","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111011505120w300
+Error fields: PVR_UWI_RAW__c "
+"111011705019W300","0.298","1.72","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111011705019w300
+Error fields: PVR_UWI_RAW__c "
+"111011705019W300","0.575","1.72","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111011705019w300
+Error fields: PVR_UWI_RAW__c "
+"111021505025W302","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111022806404W400","0.04982","246.61","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111030705019W300","0","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111030705019w300
+Error fields: PVR_UWI_RAW__c "
+"111030705019W300","0.116","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111030705019w300
+Error fields: PVR_UWI_RAW__c "
+"111042906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111050705019W300","0","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111050705019w300
+Error fields: PVR_UWI_RAW__c "
+"111050705019W300","0.011","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111050705019w300
+Error fields: PVR_UWI_RAW__c "
+"111052906404W400","0.04982","325.58","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111060105024W302","0.023","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111060705019W300","0.008","-594.37","08-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111060705019w300
+Error fields: PVR_UWI_RAW__c "
+"111060705019W300","0.07375","-594.37","08-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111060705019w300
+Error fields: PVR_UWI_RAW__c "
+"111061204824W305","0","0","02-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111071705019W300","0","9.71","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111071705019w300
+Error fields: PVR_UWI_RAW__c "
+"111071705019W300","12.794","9.71","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111071705019w300
+Error fields: PVR_UWI_RAW__c "
+"111072806404W400","0.04982","424.23","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111110605023W302","0.023","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111110705019W300","0.00277","22.68","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111110705019w300
+Error fields: PVR_UWI_RAW__c "
+"111110705019W300","0.049","22.68","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111110705019w300
+Error fields: PVR_UWI_RAW__c "
+"111110805019W300","0.01316","12.99","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111110805019w300
+Error fields: PVR_UWI_RAW__c "
+"111110805019W300","0.308","12.99","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111110805019w300
+Error fields: PVR_UWI_RAW__c "
+"111110905223W303","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111111105120W300","0","15.3","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111111105120w300
+Error fields: PVR_UWI_RAW__c "
+"111111105120W300","0.142","15.3","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111111105120w300
+Error fields: PVR_UWI_RAW__c "
+"111120705019W300","0.428","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111120705019w300
+Error fields: PVR_UWI_RAW__c "
+"111120705019W300","0.75615","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111120705019w300
+Error fields: PVR_UWI_RAW__c "
+"111123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111130705019W300","0","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111130705019w300
+Error fields: PVR_UWI_RAW__c "
+"111130705019W300","0.104","0","03-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111130705019w300
+Error fields: PVR_UWI_RAW__c "
+"111132906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111141105120W300","0","12.17","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111141105120w300
+Error fields: PVR_UWI_RAW__c "
+"111141105120W300","0.0023","12.17","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111141105120w300
+Error fields: PVR_UWI_RAW__c "
+"111141705019W300","0.045","2.85","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111141705019w300
+Error fields: PVR_UWI_RAW__c "
+"111141705019W300","0.41835","2.85","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111141705019w300
+Error fields: PVR_UWI_RAW__c "
+"111150805019W300","0.0023","7.12","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111150805019w300
+Error fields: PVR_UWI_RAW__c "
+"111150805019W300","0.091","7.12","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111150805019w300
+Error fields: PVR_UWI_RAW__c "
+"111151705019W300","0","29.18","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111151705019w300
+Error fields: PVR_UWI_RAW__c "
+"111151705019W300","0.065","29.18","07-MAY-18","DUPLICATE_VALUE:Duplicate external id specified: 111151705019w300
+Error fields: PVR_UWI_RAW__c "
+"111161706404W400","0.04982","401.79","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111162906404W400","0.04982","190.56","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"111163206404W400","0.04982","488.53","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112022806404W400","0.04982","885.86","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112042906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112053105126W303","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112072806404W400","0.04982","343.3","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112132906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112133206404W400","0.04982","356.76","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112161706404W400","0.04982","451.84","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"112163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113042906404W400","0.04982","337.61","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113052906404W400","0.04982","310.57","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113053206404W400","0.04982","66.07","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113060705124W302","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113072806404W400","0.04982","531.95","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113123206404W400","0.04982","437.2","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113132906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113150105128W302","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113161706404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113162906404W400","0.04982","208.57","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"113163206404W400","0.04982","743.82","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114052906404W400","0.04982","300.62","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114053206404W400","0.04982","94.83","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114072806404W400","0.04982","430.89","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114123206404W402","0.04982","18.51","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114132906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114161706404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"114163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115022806404W400","0.04982","650.04","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115042906404W400","0.04982","5.42","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115053206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115072806404W400","0.04982","394.35","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115122906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115133206404W400","0.04982","702.78","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115162906404W400","0.04982","156.38","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"115163206404W400","0.04982","438.14","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116042906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116052906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116072806404W400","0.04982","843.6","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116122906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116123206404W400","0.04982","31.91","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116162906404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"116163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117042906404W400","0.04982","272.73","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117072806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117122906404W400","0.03564","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117133206404W400","0.04982","38.94","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"117162906404W400","0.04982","171.48","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"118022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"118123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"118133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"118163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"119022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"119123206404W400","0.04982","365.77","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"119133206404W400","0.04982","529.7","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"119163206404W400","0.04982","303.22","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"120022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"120123206404W400","0.04982","531.77","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"120133206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"120163206404W400","0.04982","135.13","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121022806404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121100605023W302","0.023","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121102505126W302","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"121163206404W400","0.04982","77.31","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"122123206404W400","0.04982","33.95","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"122163206404W400","0.04982","200.14","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"123123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"123163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"124123206404W400","0.04982","416.4","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"124163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"125123206404W400","0.04982","18.01","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"125163206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"126123206404W400","0.04982","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"130081305125W303","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"131071105126W304","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"195041804923W300","0.04181","380.26","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"196041804923W300","0.01923","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"197050705323W300","0.03627","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"19B011304924W300","0.01923","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"19D011304924W300","0.01923","0","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"1D0100704606W402","0","0","07-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "
+"1S0022806404W400","0.04982","548.98","08-MAY-18","REQUIRED_FIELD_MISSING:Required fields are missing: [Well_ID__c]
+Error fields: Well_ID__c "

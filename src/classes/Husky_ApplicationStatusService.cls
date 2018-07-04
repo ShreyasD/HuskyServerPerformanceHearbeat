@@ -12,9 +12,9 @@ global class Husky_ApplicationStatusService {
 
     webservice static Husky_ServiceNowApiUtils.Response pushRecords (List<APIApplicationStatus> records) {
       Husky_ServiceNowApiUtils.Response response = new Husky_ServiceNowApiUtils.Response();
-      //initialize();
-      //response.addResults(parseRecords(records));
-      //response.addResults(commitRecords());
+      initialize();
+      response.addResults(parseRecords(records));
+      response.addResults(commitRecords());
       return response;
     }
     /*****************************************************************************/
@@ -38,6 +38,8 @@ global class Husky_ApplicationStatusService {
 				status.Status__c = applicationStatus.status;
 				status.Kbase_Article__c = applicationStatus.kbase_article;
 				status.Message__c = applicationStatus.message;
+				status.External_Key__c = applicationStatus.application + '-' + 
+					applicationStatus.monitor_type + '-' + applicationStatus.monitor_name;
 				applicationStatusRecords.add(status);
 			}
 	    } catch (Exception ex) {
@@ -58,7 +60,7 @@ global class Husky_ApplicationStatusService {
 		List<Database.UpsertResult> upsertResults = new List<Database.UpsertResult>();
 
 		//Upsert
-		upsertResults.addAll(Database.upsert(applicationStatusRecords, SCOM_Application_Status__c.fields.Name, false));
+		upsertResults.addAll(Database.upsert(applicationStatusRecords, SCOM_Application_Status__c.fields.External_Key__c, false));
 		dmlRecords.addAll((List<SObject>) applicationStatusRecords);
 
 		for(Integer i=0; i < upsertResults.size(); i++) {
@@ -78,6 +80,12 @@ global class Husky_ApplicationStatusService {
 	}
 
 	private static Datetime getDate(String dateString) {
-		return System.now();
+		Integer year = Integer.valueOf(dateString.substring(0,4));
+		Integer month = Integer.valueOf(dateString.substring(4,6));
+		Integer day = Integer.valueOf(dateString.substring(6,8));
+		Integer hours = Integer.valueOf(dateString.substring(8,10));
+		Integer minutes = Integer.valueOf(dateString.substring(10,12));
+		Integer seconds = Integer.valueOf(dateString.substring(12,14));
+		return Datetime.newInstance(year, month, day, hours, minutes, seconds);
 	}
 }

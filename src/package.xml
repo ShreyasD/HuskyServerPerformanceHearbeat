@@ -16,12 +16,20 @@
 		<members>Husky_ServiceNowChangeRequestServiceTest</members>
 		<members>Husky_ServiceNowPerformanceService</members>
 		<members>Husky_ServiceNowPerformanceServiceTest</members>
+		<members>Husky_HeartbeatApplicationStatusCtrl</members>
+		<members>Husky_IRDIncidentService</members>
+		<members>Husky_IRDIncidentReportController</members>
+		<members>Husky_IRDIncidentListCtrl</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
 		<members>Husky_SCOMAvailabilityDashboard</members>
 		<members>Husky_SCOMChangeRequestByServer</members>
 		<members>Husky_SCOMPerformanceDashboard</members>
+		<members>Husky_HeartbeatApplicationStatus</members>
+		<members>Husky_IRDIncidentReport</members>
+		<members>Husky_IRDIncidentList</members>
+		<members>Husky_IRDIncidentReportExcel</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -38,6 +46,7 @@
 		<members>SCOM_Change_Request__c</members>
 		<members>SCOM_Performance__c</members>
 		<members>SCOM_Server__c</members>
+		<members>IRD_Incident__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
