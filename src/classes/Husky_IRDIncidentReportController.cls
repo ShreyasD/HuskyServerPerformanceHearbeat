@@ -217,6 +217,8 @@ public with sharing class Husky_IRDIncidentReportController {
         }
 
         public Decimal getAvgResponseTime() {
+            System.debug('createdIncidents.size(): ' + createdIncidents.size() 
+                + ' totalResponseTime: ' + totalResponseTime);
             if(createdIncidents.size() > 0)
                 return (totalResponseTime/(createdIncidents.size()*3600));
             return 0.0;

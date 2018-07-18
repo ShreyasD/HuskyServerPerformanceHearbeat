@@ -210,6 +210,30 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Business_Elapsed_Time_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Elapsed Time (Resolution)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Elapsed_Time_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Elapsed Time (Response)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Calc_Result_Resolution__c</fullName>
         <externalId>false</externalId>
         <label>Calc Result (Resolution)</label>
@@ -343,9 +367,9 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>Duration__c</fullName>
+        <fullName>Duration_Resolution__c</fullName>
         <externalId>false</externalId>
-        <label>Duration</label>
+        <label>Duration (Resolution)</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -353,6 +377,27 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration (Response)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hyper_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Hyper Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>Impact__c</fullName>
@@ -574,7 +619,6 @@
                 <fullName>scm_support</fullName>
                 <default>false</default>
             </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
@@ -862,7 +906,6 @@
                 <controllingFieldValues>Security</controllingFieldValues>
                 <controllingFieldValues>Telecom</controllingFieldValues>
             </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
@@ -918,6 +961,15 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>toDelete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>toDelete</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <label>Incident</label>
     <listViews>

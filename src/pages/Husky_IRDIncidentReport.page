@@ -184,6 +184,7 @@
                   </thead>
                   <tbody>
                   	<apex:variable var="index" value="{!1}"/>
+                    <apex:variable var="previousAvgResponseTimeValue" value=""/>
                     <apex:repeat value="{!months}" var="month">
                         <apex:variable var="key" value="{!assgnGroup+'-'+month}"/>
                         <apex:outputPanel layout="none" id="dataGroupingRow" rendered="{!index <= maxMonthOfYear}">
@@ -207,11 +208,12 @@
 	                          </td>
 	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Response Time (hrs)">
 	                            <div class="slds-truncate">
-	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].CreatedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].CreatedIdSet}&retURL=/Husky_IRDIncidentReport"
+                                  rendered="{!dataGroupingMonthMap[key].AvgResponseTime <> null &&dataGroupingMonthMap[key].AvgResponseTime >= 0}">
 	                                    <!-- <apex:outputText value="{!dataGroupingMonthMap[key].AvgResponseTime}"/> -->
-	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    <apex:outputText value="{0, number, #####0.00}">
 	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgResponseTime}" />
-	                                	</apex:outputText>
+	                                	  </apex:outputText>
 	                                </apex:outputLink>
 	                            </div>
 	                          </td>
@@ -233,9 +235,10 @@
 	                          </td>
 	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Resolution Time (hrs)">
 	                            <div class="slds-truncate">
-	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].ResolvedIdSet}&retURL=/Husky_IRDIncidentReport">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].ResolvedIdSet}&retURL=/Husky_IRDIncidentReport"
+                                  rendered="{!dataGroupingMonthMap[key].AvgResolutionTime <> null && dataGroupingMonthMap[key].AvgResolutionTime >= 0}">
 	                                    <!-- <apex:outputText value="{!dataGroupingMonthMap[key].AvgResolutionTime}"/> -->
-	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                    <apex:outputText value="{0, number, #####0.00}">
 	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgResolutionTime}" />
 	                                	</apex:outputText>
 	                                </apex:outputLink>
@@ -259,16 +262,18 @@
 	                          </td>
 	                          <td scope="row" class="slds-cell-wrap" data-label="Avg Age of Backlog">
 	                            <div class="slds-truncate">
-	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].OpeningBacklogIdSet}&retURL=/Husky_IRDIncidentReport" rendered="{!yearSelected == TEXT(YEAR(TODAY())) && index == MONTH(TODAY())}">
-	                                    <apex:outputText value="{0, number, ###,##0.00}">
+	                                <apex:outputLink value="/apex/Husky_IRDIncidentList?idSet={!dataGroupingMonthMap[key].OpeningBacklogIdSet}&retURL=/Husky_IRDIncidentReport" rendered="{!yearSelected == TEXT(YEAR(TODAY())) && index == MONTH(TODAY()) && dataGroupingMonthMap[key].AvgAgeOfBacklogInDays <> null && dataGroupingMonthMap[key].AvgAgeOfBacklogInDays >= 0}">
+	                                    <apex:outputText value="{0, number, #####0.00}">
 	                                    	<apex:param value="{!dataGroupingMonthMap[key].AvgAgeOfBacklogInDays}" />
-	                                	</apex:outputText>
+	                                	  </apex:outputText>
+                                      <!-- <apex:outputText value="{!dataGroupingMonthMap[key].AvgAgeOfBacklogInDays}"/> -->
 	                                </apex:outputLink>
 	                            </div>
 	                          </td>
 	                        </tr>
 	                    </apex:outputPanel>
 	                    <apex:variable var="index" value="{!index+1}"/>
+                      <apex:variable var="previousAvgResponseTimeValue" value="{!dataGroupingMonthMap[key].AvgResponseTime}"/>
                     </apex:repeat>
                   </tbody>
                 </table>

@@ -14,6 +14,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Husky_IRDIncidentListCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Husky_IRDIncidentReportController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Husky_IRDIncidentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -72,7 +80,17 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Actual_Elapsed_Percentage_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Actual_Elapsed_Percentage_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Actual_Elapsed_Time_Resolution__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -82,12 +100,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Actual_End_Date_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Actual_End_Date_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Actual_Start_Date_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Actual_Start_Date_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Actual_Time_Left_Resolution__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -107,7 +140,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Business_Duration_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Business_Duration_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Business_Elapsed_Time_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Business_Elapsed_Time_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Calc_Result_Resolution__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -142,12 +195,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Created_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Created_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>IRD_Incident__c.Duration__c</field>
+        <field>IRD_Incident__c.Duration_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Duration_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Hyper_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -192,6 +260,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Resolved_Date_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Resolved_Date_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -202,13 +275,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Responded_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Responded_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
+        <field>IRD_Incident__c.SLA_Definition_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.SLA_Definition_Response__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -222,7 +305,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Stage_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Stage_Response__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.Start_Time_Resolution__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -242,12 +335,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>IRD_Incident__c.Time_Worked_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>IRD_Incident__c.Time_Worked_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>IRD_Incident__c.Urgency__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>IRD_Incident__c.toDelete__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -627,6 +730,18 @@
     </objectPermissions>
     <pageAccesses>
         <apexPage>Husky_HeartbeatApplicationStatus</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Husky_IRDIncidentList</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Husky_IRDIncidentReport</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Husky_IRDIncidentReportExcel</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
